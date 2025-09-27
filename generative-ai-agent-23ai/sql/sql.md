@@ -20,9 +20,9 @@ This lab assumes you have:
 * All previous labs successfully completed
 * Must have an Administrator Account or Permissions to manage several OCI Services: Oracle ADB
 
-## Task 1: Oracle 23ai Prerequisites
+## Task 1: Oracle Database 23ai Prerequisites
 
-The user must have the Oracle 23ai Database with the following components:
+The user must have the Oracle Database 23ai with the following components:
 
 * Table: Used to store records with 'docid', 'body', and 'vector'.
 * Database Function: Provides vector search results against the provided query.
@@ -299,10 +299,10 @@ Note: Names can vary but must be aliased as follows in the function.
             v_docid VARCHAR2(100);
             v_body VARCHAR2(4000);
             v_score NUMBER;
-            p_query VARCHAR2(100) := 'How to Convert Text String to Embedding?'
+            p_query VARCHAR2(100) := 'How to Convert Text String to Embedding?';
             top_k NUMBER := 10;
        BEGIN
-            v_results := retrieval_test_func(p_query, top_k);
+            v_results := retrieval_func_ai(p_query, top_k);
 
             DBMS_OUTPUT.PUT_LINE('DOCID | SCORE');
             DBMS_OUTPUT.PUT_LINE('--------|------');
@@ -326,4 +326,4 @@ Note: Names can vary but must be aliased as follows in the function.
 * **Contributors**
     * **Kaushik Kundu**, Master Principal Cloud Architect, NACIE
 * **Last Updated By/Date**
-    * **Abhinav Jain**, Senior Cloud Engineer, NACIE, October 2024
+    * **Abhinav Jain**, Senior Cloud Engineer, NACIE, May 2025
