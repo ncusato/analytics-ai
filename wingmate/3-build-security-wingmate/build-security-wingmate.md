@@ -27,12 +27,35 @@ This lab assumes you have the following:
 
 2. Leave the default blank page settings, and select **Next**.
 
-	![create page button](./images/blank-page.png "")
+	![default blank page option](./images/blank-page.png "")
 
 3. Name the blank page **Security Wingmate** and select **Create Page**.
 
-	![create page button](./images/name-security-wingmate.png "")
+	![page naming text box](./images/name-security-wingmate.png "")
 
+4. Right click **Body** on the application tree to the left and select **Create Region**.
+
+	![create region button](./images/create-region.png "")
+
+5. On the right side panel under Identification for the region, Enter the name **WingmateChat**.
+
+	![name wingmatechat region](./images/name-region-wingmate.png "")
+
+6. In the center of the App Builder, select the **Buttons** menu, and drag and drop the **text button** to the Region Body of WingmateChat region.
+
+	![create page button](./images/startwingmatebutton.png "")
+
+7. Name the button on the right panel **StartWingmate**.
+
+	![name the page button](./images/name-wingmate-button.png "")
+
+8. On the left panel, right click the new button and select **Create Dynamic Action**.
+
+	![left menu for button and dynamic action](./images/dynamic-startwingmate-button.png "")
+
+9. On the left panel, right click the new button and select **Create Dynamic Action**.
+
+	![left menu for button and dynamic action](./images/dynamic-startwingmate-button.png "")
 
 ## Acknowledgements
 

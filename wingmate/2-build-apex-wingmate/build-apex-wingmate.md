@@ -108,11 +108,31 @@ Estimated time - 20 minutes
 
 	![Web Credentials Create button](./images/create-web-credentials.png "")
 
-5. Change the Authentication Type to **OCI Native Authentication**. Paste the information collected on the notepad in the previous lab into the cooresponding fields (be sure to name the credentials and static ID: **api_key**) and select **Create**.
+5. Change the Authentication Type to **OCI Native Authentication**. Paste the information collected on the notepad in the previous lab into the cooresponding fields (be sure to name the credentials and static ID: **api_key**). 
+Additionally under **Valid for URLs** include the following endpoint for the GenAI Service and select **Create**: 
+	```
+	<copy>https://inference.generativeai.us-chicago-1.oci.oraclecloud.com</copy>
+	```
 
-	![api_key credentials for oci access](./images/save-api-key-creds.png "")
+![api_key credentials for oci access](./images/save-api-key-creds.png "")
 
-## Task 4: Create the Application
+## Task 4: Create GenAI Service
+
+1. Navigate back to the **Workspace Utilities** by selecting the first menu option on the breadcrub bar.
+	
+	![breadcrub bar for workspace utilities](./images/nav-utilities.png "")
+
+2. Select **Generative AI button** to navigate to configure the services.
+	
+	![genai services button on workspace utilities](./images/genai-services-button.png "")
+
+3. Create a GenAI service by selecting the **create** button.
+
+	![create button on genai service console](./images/create-genai-service.png "")
+
+4. 
+
+## Task 5: Create the Application
 
 1. Navigate back to the App Builder by selecting the menu button **App Builder**.
 
