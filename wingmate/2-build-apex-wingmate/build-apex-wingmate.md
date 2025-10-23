@@ -8,7 +8,8 @@ Estimated time - 20 minutes
 
 ### Objectives
 
-* Provision a 23ai ADB and APEX App
+* Provision a 26ai ADB and APEX App
+* Generate API Keys
 * Update the Credentials to Connect to OCI Resources
 * Create the Application
 
@@ -17,7 +18,7 @@ Estimated time - 20 minutes
 * An OCI cloud account
 * Subscription to US-Central Chicago Region
 
-## Task 1: Provision a 23ai ADB and APEX App
+## Task 1: Provision a 26ai ADB and APEX App
 
 1. Navitage to the OCI home console and expand the side-menu bar.
 
@@ -31,11 +32,11 @@ Estimated time - 20 minutes
 
 	![Console create ADB button](./images/create-adb-button.png "")
 
-4. Give the ADB a unique name, such as **WINGMATE**, select database version **23ai**, and provide a password. Leave everything else as default and click **Create**.
+4. Give the ADB a unique name, such as **WINGMATE**, select database version **26ai**, and provide a password. Leave everything else as default and click **Create**.
 
 	![Name the ADB](./images/name-adb.png "")
 
-	![Choose database version dropdown](./images/choose-23ai.png "")
+	![Choose database version dropdown](./images/choose-26ai.png "")
 
 5. Navigate to the newly created ADB by selecting the name that you provided, then click the **Tool Configuration** tab and select the Public Access URL **Copy** button for Oracle APEX. Paste that in a new tab.
 
@@ -75,7 +76,21 @@ Estimated time - 20 minutes
 
 	![Sign in workspace credentials](./images/sign-in-workspace.png "")
 
-## Task 2: Update the Credentials to Connect to OCI Resources
+## Task 2: Generate API Keys
+
+1. Navigate back to the OCI console and click your profile icon on the upper-right-hand side of the screen. Select **User Settings**. 
+
+	![Profile menu button](./images/profile.png "")
+
+2. On the menu in the center, select **tokens and keys**.
+
+	![Menu button on profile](./images/tokens-and-keys.png "")
+
+3. Make sure **Generate API Key Pair** is selected. Download your private & public key because you will need these for later. After downloading, select **Add**. You will see a configuration file preview, you can save this on a notepad as it will helpful in the next lab. You may proceed to the next lab. 
+
+	  ![Create Bucket button](./images/save-key.png "")
+
+## Task 3: Update the Credentials to Connect to OCI Resources
 
 1. Click **App Builder** to access the Web Credentials.
 
@@ -93,11 +108,11 @@ Estimated time - 20 minutes
 
 	![Web Credentials Create button](./images/create-web-credentials.png "")
 
-5. Paste the information collected in the first lab into the cooresponding fields (be sure to name the credentials and static ID: **api_key**) and select **Create**.
+5. Change the Authentication Type to **OCI Native Authentication**. Paste the information collected on the notepad in the previous lab into the cooresponding fields (be sure to name the credentials and static ID: **api_key**) and select **Create**.
 
 	![api_key credentials for oci access](./images/save-api-key-creds.png "")
 
-## Task 3: Create the Application
+## Task 4: Create the Application
 
 1. Navigate back to the App Builder by selecting the menu button **App Builder**.
 
@@ -110,7 +125,6 @@ Estimated time - 20 minutes
 3. Name the App **WINGMATE** and click **Create Application**.
 
 	![Naming of the App](./images/name-app.png "") 
-
 
 Thank you for completing this lab.
 
