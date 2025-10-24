@@ -18,8 +18,12 @@
             "filename": "../../2-build-apex-wingmate/build-apex-wingmate.md"
         },
         {
-            "title": "Lab 2: Build a RAG Chatbot using Low-Code APEX",
+            "title": "Lab 2: Build a Security Wingmate",
             "filename": "../../3-build-security-wingmate/build-security-wingmate.md"
+        },
+                {
+            "title": "Lab 3: Build a MultiCloud Wingmate",
+            "filename": "../../4-build-multicloud-wingmate/build-multicloud-wingmate.md"
         },
         {
             "title": "Need Help?",

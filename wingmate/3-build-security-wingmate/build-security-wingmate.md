@@ -57,6 +57,9 @@ This lab assumes you have the following:
 
 	![left menu for button and dynamic action](./images/dynamic-startwingmate-button.png "")
 
+
+You may now **proceed to the next lab**.
+
 ## Acknowledgements
 
 * **Authors:**

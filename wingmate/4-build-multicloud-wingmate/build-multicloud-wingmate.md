@@ -1,4 +1,4 @@
-# Build a Wingmate on AI Database 26ai 
+# Build a RAG Chatbot using Low-Code APEX
 
 ## Introduction
 
@@ -11,16 +11,12 @@ Estimated time - 20 minutes
 * Provision a Oracle AI Database 26ai ADB and APEX App
 * Generate API Keys
 * Update the Credentials to Connect to OCI Resources
-* Create GenAI Service
 * Create the Application
-* Load Synthetic Data
-* (Optional) Connect RESTful data from Tenancy
-
 
 ### Prerequisites
 
 * An OCI cloud account
-* Subscription to US-Central Chicago, US-Ashburn-1, or US-Phoenix-1 Region
+* Subscription to US-Central Chicago Region
 
 ## Task 1: Provision a Oracle AI Database 26ai ADB  and APEX App
 
@@ -117,9 +113,8 @@ Additionally under **Valid for URLs** include the following endpoint for the Gen
 	```
 	<copy>https://inference.generativeai.us-chicago-1.oci.oraclecloud.com</copy>
 	```
-* **Note:** Be sure this matches the subscribed region which hosts GenAI Services.
 
-	![api_key credentials for oci access](./images/save-api-key-creds.png "")
+![api_key credentials for oci access](./images/save-api-key-creds.png "")
 
 ## Task 4: Create GenAI Service
 
@@ -135,7 +130,7 @@ Additionally under **Valid for URLs** include the following endpoint for the Gen
 
 	![create button on genai service console](./images/create-genai-service.png "")
 
-4. Name the service **OCI_GENAI** and 
+4. 
 
 ## Task 5: Create the Application
 
@@ -151,11 +146,7 @@ Additionally under **Valid for URLs** include the following endpoint for the Gen
 
 	![Naming of the App](./images/name-app.png "") 
 
-## Task 6: Load Synthetic Data 
-
-## Task 7: (Optional) Connect RESTful data from Tenancy
-
-You may now **proceed to the next lab**.
+Thank you for completing this lab.
 
 ## Acknowledgements
 

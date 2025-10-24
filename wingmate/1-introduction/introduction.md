@@ -3,7 +3,7 @@
 ## About this Workshop
 The scope of this workshop is to create a Oracle Cloud Infrastructure (OCI) Wingmate that will help monitor the security of a tenancy. This workshop will use Oracle 23ai Autonomous Database to store data collected from a tenancy and sanitized for public consumption. 
 
-> **NOTE:** Your tenancy must be subscribed to the **US Midwest (Chicago)** region in order to run this workshop. See the [OCI documentation](https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/managingregions.htm) for more details.
+> **NOTE:** Your tenancy must be subscribed to the **US Midwest (Chicago), US-Phoenix-1, or US-Ashburn-1** region in order to run this workshop. See the [OCI documentation](https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/managingregions.htm) for more details.
 
 ### What is Generative AI?
 
@@ -23,10 +23,12 @@ In this workshop, you will learn how to:
 
 * Build Wingmate in APEX
 * Build Security Wingmate
+* Build MultiCloud Wingmate
 
 ### Prerequisites
 
-* Your tenancy **must be subscribed to the US Midwest (Chicago)** region.
+* An OCI cloud account
+* Subscription to US-Central Chicago, US-Ashburn-1, or US-Phoenix-1 Region
 * Basic database and SQL knowledge.
 * Familiarity with Oracle Cloud Infrastructure (OCI) is helpful.
 * Familiarity with the role of REST services.
