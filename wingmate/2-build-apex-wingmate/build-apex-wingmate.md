@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This lab walks the user 
+This lab walks the user on how to provision an Autonomous AI Database, generate API keys, and use these keys to connect Oracle GenAI services to the APEX application. Using synthetic data, the Security and Multicloud data will be modeled in the database as a reference for the GenAI services. Additionally, RESTful data collection from the tenancy can collected to generate live reporting of the Tenancy. This provides the Wingmate Application a streamlined observability into the tenancy operations using natural language.
 
 Estimated time - 20 minutes
 
@@ -117,7 +117,7 @@ Additionally under **Valid for URLs** include the following endpoint for the Gen
 	```
 	<copy>https://inference.generativeai.us-chicago-1.oci.oraclecloud.com</copy>
 	```
-* **Note:** Be sure this matches the subscribed region which hosts GenAI Services.
+* **Note:** Be sure this matches the subscribed region which hosts GenAI Services. 
 
 	![api_key credentials for oci access](./images/save-api-key-creds.png "")
 
@@ -153,7 +153,23 @@ Additionally under **Valid for URLs** include the following endpoint for the Gen
 
 ## Task 6: Load Synthetic Data 
 
+1. Navigate to the **SQL Workshop** menu option by selecting the tab at the top.
+
+	![Navigate to SQL Workshop](./images/nav-sql.png "")
+
+2. Select **SQL Commands** from the menu shown in the center of the screen. 
+
+	![SQL Commands menu button](./images/nav-sql-commands.png "")
+
+3. Download the following SQL file and paste its contents in the console and select **Run**.
+
+	![Run SQL in SQL console](./images/sql-run.png "")
+
+4. Confirm the data loading is complete.
+
 ## Task 7: (Optional) Connect RESTful data from Tenancy
+
+1. 
 
 You may now **proceed to the next lab**.
 
