@@ -169,7 +169,67 @@ Additionally under **Valid for URLs** include the following endpoint for the Gen
 
 ## Task 7: (Optional) Connect RESTful data from Tenancy
 
-1. 
+1. Navigate back to the application by selecting **App Builder** and then the **OCI Wingmate** app name.
+
+	![Navigate to the Application](./images/nav-back-app.png "")
+
+2. Select **Shared components** to navigate to the RESTful operations.
+
+	![Navigate to the shared components](./images/shared-components.png "")
+
+3. Select **REST Data Sources** under Data Sources.
+
+	![Navigate to the REST Data Sources](./images/rest-data-services.png "")
+
+4. Select **Create** to create your first RESTful data source.
+
+	![Create RESTfull Data source Button](./images/create-rest-button.png "")
+	
+5. Select **Next** to create RESTful Data source from scratch.
+
+	![Create RESTfull Data source from scratch button](./images/create-from-scratch.png "")
+
+6. Name the service, such as the following **HostInsightsSummary** and paste an endpoint URL for example: 
+* **https://operationsinsights.us-ashburn-1.oci.oraclecloud.com/20200630/hostInsights/resourceStatistics**
+
+	> **Note:** For full list of endpoints, please check [Oracle Docs](https://docs.oracle.com/en-us/iaas/api/).
+	
+	Select **Next**.
+
+	![Create RESTfull Data source from scratch button](./images/endpoint-name.png "")
+
+
+7. Validate the endpoint and select **Next**.
+
+	![Next button for remote server](./images/remote-server.png "")
+
+8. Select **Next** if no pagination is likely true.
+
+	![Next button with no pagination](./images/no-pagination.png "")
+
+9. Select the qualified credentails that allow for API queries of the tenancy. Select **Next**.
+
+	![Set credentials for Rest](./images/credentials-rest.png "")
+
+10. Navigate back if the endpoint requires parameters by selecting **back arrow**.
+
+	![Discovery Error](./images/discovery-error.png "")
+
+11. Select **Advanced** to define the parameters.
+
+	![Advanced Data Discovery](./images/advanced-data-source.png "")
+
+12. Insert the required parameters and select **Discover**.
+
+	![Header Compartment Example](./images/header-compartment.png "")
+
+	>**Note:** If the response says not authorized, navigate back to the credentials and select the correct credentials.
+
+	![Example Not Authorized Error](./images/not-authorized.png "")
+
+13. Validate a successfull data source discovery matches the expected profile. Select **Create REST Data Source** to finish the creation process for the REST endpoint. 
+
+	![Host details of successful discovery](./images/host-details.png "")
 
 You may now **proceed to the next lab**.
 
@@ -178,4 +238,4 @@ You may now **proceed to the next lab**.
 * **Authors:**
 	* Royce Fu - Master Principle Cloud Architect
 	* Nicholas Cusato - Cloud Architect
-* **Last Updated by/Date** - Nicholas Cusato, October 2025
+* **Last Updated by/Date** - Nicholas Cusato, November 2025
