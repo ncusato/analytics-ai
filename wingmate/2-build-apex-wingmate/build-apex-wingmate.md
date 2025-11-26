@@ -223,7 +223,7 @@ Additionally under **Valid for URLs** include the following endpoint for the Gen
 
 	![Header Compartment Example](./images/header-compartment.png "")
 
-	>**Note:** If the response says not authorized, navigate back to the credentials and select the correct credentials.
+	>**Note:** If the response says not authorized, navigate back to the credentials and select the correct credentials. This might require going back to Task 3 and creating a separate Web Credential for API, distinct from the GenAI service. Additionally, manage resource permissions are necessary for utilizing the API.
 
 	![Example Not Authorized Error](./images/not-authorized.png "")
 
