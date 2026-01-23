@@ -1,7 +1,21 @@
 # Introduction
 
 ## About this Workshop
-The scope of this workshop is to create a Oracle Cloud Infrastructure (OCI) Wingmate that will help monitor the security of a tenancy. This workshop will use Oracle 23ai Autonomous Database to store data collected from a tenancy and sanitized for public consumption. 
+The scope of this workshop is to create a Oracle Cloud Infrastructure (OCI) Wingmate that will help monitor the security of a tenancy. This workshop will use Oracle 26ai Autonomous AI Database to store data collected from a tenancy and sanitized for public consumption. 
+
+![navigate home buttons](./images/cover-page.png "")
+
+Utilitizing natural language, querying tenancy information makes operations oversight a breaze. 
+
+![navigate home buttons](./images/cover-page-2.png "")
+
+Using all the features of a sophisticated data model on a converged database allows deeper insights into how resources are dependent on eachother. For example, PDBs in a multitenant architecture can be visualized with Graph to better understand noisey neighbors.
+
+![navigate home buttons](./images/cover-page-3.png "")
+
+Visualize resources from an interactive experience.
+
+![navigate home buttons](./images/cover-page-4.png "")
 
 > **NOTE:** Your tenancy must be subscribed to the **US Midwest (Chicago), US-Phoenix-1, or US-Ashburn-1** region in order to run this workshop. See the [OCI documentation](https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/managingregions.htm) for more details.
 
@@ -37,8 +51,6 @@ You may now **proceed to the next lab**.
 
 ## Learn more
 
-* [What is Retreival Augmented Generation?](https://www.oracle.com/artificial-intelligence/generative-ai/retrieval-augmented-generation-rag/)
-* [Oracle Generative AI RAG Agent Service](https://blogs.oracle.com/ai-and-datascience/post/oci-generative-ai-agents-rag-service)
 * [Oracle Autonomous Database Documentation](https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/index.html)
 * [Additional Autonomous Database Tutorials](https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/tutorials.html)
 * [Overview of Generative AI Service](https://docs.oracle.com/en-us/iaas/Content/generative-ai/overview.html)
@@ -49,4 +61,4 @@ You may now **proceed to the next lab**.
 * **Authors:**
 	* Royce Fu - Master Principle Cloud Architect
 	* Nicholas Cusato - Cloud Architect
-* **Last Updated by/Date** - Nicholas Cusato, October 2025
+* **Last Updated by/Date** - Nicholas Cusato, Febuary 2026

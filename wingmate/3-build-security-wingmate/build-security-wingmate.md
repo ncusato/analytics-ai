@@ -1,4 +1,4 @@
-# Build Security Wingmate on APEX 
+# Lab 2: Build Security Wingmate on APEX 
 
 ## Introduction
 This lab will walk you through setting up the Security Wingmate page for the APEX application. The chat functionality is a simple setup, while defining the 
@@ -65,4 +65,4 @@ You may now **proceed to the next lab**.
 * **Authors:**
 	* Royce Fu - Master Principle Cloud Architect
 	* Nicholas Cusato - Cloud Architect
-* **Last Updated by/Date** - Nicholas Cusato, October 2025
+* **Last Updated by/Date** - Nicholas Cusato, Febuary 2026

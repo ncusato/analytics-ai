@@ -4,6 +4,8 @@
 
 This lab walks the user on how to provision an Autonomous AI Database, generate API keys, and use these keys to connect Oracle GenAI services to the APEX application. Using synthetic data, the Security and Multicloud data will be modeled in the database as a reference for the GenAI services. Additionally, RESTful data collection from the tenancy can collected to generate live reporting of the Tenancy. This provides the Wingmate Application a streamlined observability into the tenancy operations using natural language.
 
+> **Note:** For reference, the list of available APIs that can be utilized for the optional Lab #7: [OCI API Reference and Endpoints](https://docs.oracle.com/en-us/iaas/api/)
+
 Estimated time - 20 minutes
 
 ### Objectives
@@ -15,7 +17,6 @@ Estimated time - 20 minutes
 * Create the Application
 * Load Synthetic Data
 * (Optional) Connect RESTful data from Tenancy
-
 
 ### Prerequisites
 
@@ -238,4 +239,4 @@ You may now **proceed to the next lab**.
 * **Authors:**
 	* Royce Fu - Master Principle Cloud Architect
 	* Nicholas Cusato - Cloud Architect
-* **Last Updated by/Date** - Nicholas Cusato, November 2025
+* **Last Updated by/Date** - Nicholas Cusato, Febuary 2026

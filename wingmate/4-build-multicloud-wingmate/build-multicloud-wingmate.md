@@ -1,4 +1,4 @@
-# Build a RAG Chatbot using Low-Code APEX
+# Lab 3: Build a RAG Chatbot using Low-Code APEX
 
 ## Introduction
 
@@ -14,8 +14,8 @@ Estimated time - 20 minutes
 
 ### Prerequisites
 
-* An OCI cloud account
-* Subscription to US-Central Chicago Region
+* Completed the first lab
+* Some SQL knowledge is perfered but not necessary
 
 ## Task 1: Build a Multicloud Page of Wingmate App 
 
@@ -35,6 +35,8 @@ Estimated time - 20 minutes
 
 	![name page and next button](./images/name-multicloud.png "")
 
+5. 
+
 Thank you for completing this lab.
 
 ## Acknowledgements
@@ -42,4 +44,4 @@ Thank you for completing this lab.
 * **Authors:**
 	* Royce Fu - Master Principle Cloud Architect
 	* Nicholas Cusato - Cloud Architect
-* **Last Updated by/Date** - Nicholas Cusato, October 2025
+* **Last Updated by/Date** - Nicholas Cusato, Febuary 2026

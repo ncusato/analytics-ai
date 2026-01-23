@@ -25,6 +25,10 @@
             "title": "Lab 3: Build a MultiCloud Wingmate",
             "filename": "../../4-build-multicloud-wingmate/build-multicloud-wingmate.md"
         },
+                        {
+            "title": "Lab 4: Leverage Resource Analytics for Data Pipeline",
+            "filename": "../../5-leverage-resource-analytics/leverage-resource-analytics.md"
+        },
         {
             "title": "Need Help?",
             "description": "Solutions to Common Problems and Directions for Receiving Live Help",
