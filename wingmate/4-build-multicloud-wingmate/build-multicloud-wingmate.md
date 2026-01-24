@@ -35,7 +35,57 @@ Estimated time - 20 minutes
 
 	![name page and next button](./images/nav-wingmate.png "")
 
-5. 
+5. Rename Security to MultiCloud in the highlighted sections for value and static-id and select **Copy**.
+
+	![rename value and id and copy button](./images/rename-security.png "")
+
+6. Update AI Assistant, by navigating to **Show AI Assistant** in the navigation tree under MultiCloud Wingmate Region -> StartWingmate -> Chat -> Show AI Assistant. Update System Prompt with following:
+
+	```
+	<copy/>
+	I want you to be an OCI compute expert who is providing guidance to the customers about resource capacity planning best practices. 
+	The following list is the oci compute host insights details we have captured, please use these compute metrics data for answering questions. 
+	--------
+	&P3_OCI_HOSTINSIGHTS_DETAILS.
+	--------
+	The following list is the OCI documentation references for compute, please use these documentation references for answering recommendation related questions.
+	--------
+	&P3_OCI_DOC_REF_COMPUTE.
+
+	</copy>
+	```
+
+	>**Note:** Ensure you update the refence page number if its not matching. ie. &P3_OCI_DOC_REF_COMPUTE -> &P4_OCI_DOC_REF_COMPUTE
+
+Update the **Welcome Message** from OCI Security Wingmate to OCI MultiCloud Wingmate as well.
+
+7. Navigate to the bottom of the Navigation Tree to the hidden items. Select the OCI_CLOUDGUARD and rename it to **OCI_HOSTINSIGHTS_DETAILS**. 
+
+	![select hidden value](./images/select-hidden.png "")
+
+	![rename hidden](./images/update-hidden.png "")
+
+8. Update the computation as the following:
+
+	```
+	<copy/>
+	Select CONTEXT_PROMPT FROM oci_doc_ref_compute_sv
+	</copy>
+	```
+
+	![update computation](./images/update-computation.png "")
+
+9. Create another **Hidden Item** and name it: **OCI_HOST_INSIGHTS_DETAILS** 
+
+	![create hidden item](./images/hidden-item-hostinsights.png "")
+
+	```
+	<copy/>
+	Select CONTEXT_PROMPT FROM hostinsights_report_sv
+	</copy>
+	```
+
+	![host insights hidden value](./images/update-hostinsights-computation.png "")
 
 Thank you for completing this lab.
 
