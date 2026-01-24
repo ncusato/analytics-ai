@@ -19,21 +19,21 @@ Estimated time - 20 minutes
 
 ## Task 1: Build a Multicloud Page of Wingmate App 
 
-1. Return to the App homepage by selecting **App Builder** button, then select the name of the App **OCI Wingmate**.
+1. Use the existing template from Compute Wingmate to make the MultiCloud Wingmate by selecting the plus sign in the top right of the page and select **Copy Page**.
 
-	![navigate home buttons](./images/navigate-home.png "")
+	![navigate home buttons](./images/copy-page.png "")
 
-2. Select **Create Page** to create the Multicloud Page.
+2. Select **Next** to use the existing page.
 
-	![create page button](./images/create-page.png "")
+	![create page button](./images/copy-page-next.png "")
 
-3. Select **Next** leaving blank page as default.
+3. Name the page **MultiCloud Wingmate** and select **Next**.
 
-	![create blank page next button](./images/blank-page.png "")
+	![name the page](./images/copy-security.png "")
 
-4. Name the page **Multicloud Overview** and select **Next**.
+4. Select **Create a new navigation menu entry** and **Next**. Leave menu entry as _No parent selected_.
 
-	![name page and next button](./images/name-multicloud.png "")
+	![name page and next button](./images/nav-wingmate.png "")
 
 5. 
 
