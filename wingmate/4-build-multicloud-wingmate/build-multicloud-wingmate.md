@@ -59,7 +59,7 @@ Estimated time - 20 minutes
 
 Update the **Welcome Message** from OCI Security Wingmate to OCI MultiCloud Wingmate as well.
 
-7. Navigate to the bottom of the Navigation Tree to the hidden items. Select the OCI_CLOUDGUARD and rename it to **OCI_HOSTINSIGHTS_DETAILS**. 
+7. Navigate to the bottom of the Navigation Tree to the hidden items. Select the OCI_CLOUDGUARD and rename it to **P4_OCI_HOSTINSIGHTS_DETAILS** on the right side Indentification. 
 
 	![select hidden value](./images/select-hidden.png "")
 
@@ -75,9 +75,9 @@ Update the **Welcome Message** from OCI Security Wingmate to OCI MultiCloud Wing
 
 	![update computation](./images/update-computation.png "")
 
-9. Create another **Hidden Item** and name it: **OCI_HOST_INSIGHTS_DETAILS** 
+9. Create another **Hidden Item** by right clicking **P4_HOSTINSIGHTS_Listed**, selecting **Duplicate** and name it: **OCI_HOSTINSIGHTS_DETAILS** 
 
-	![create hidden item](./images/hidden-item-hostinsights.png "")
+	![create hidden item](./images/duplicate-hidden.png "")
 
 	```
 	<copy/>
@@ -86,6 +86,21 @@ Update the **Welcome Message** from OCI Security Wingmate to OCI MultiCloud Wing
 	```
 
 	![host insights hidden value](./images/update-hostinsights-computation.png "")
+
+10. Repeat **Step 9** to create another hidden item named **P4_OCI_DATABASE_DETAILS**
+
+	![create hidden item](./images/duplicate-hidden-details.png "")
+
+	![host insights hidden value](./images/update-hostinsights-computation.png "")
+
+11. Right Click **P5_OCI_HOSTINSIGHTS_DETAILS** and select **Computation**. Paste this under SQL Query:
+
+	```
+	<copy/>
+	SELECT CONTEXT_PROMPT FROM CIS_MULTICLOUD_DETAILS_V
+	</copy>
+	```
+
 
 Thank you for completing this lab.
 
