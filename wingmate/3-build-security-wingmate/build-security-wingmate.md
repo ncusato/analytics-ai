@@ -1,7 +1,7 @@
 # Lab 2: Build Security Wingmate on APEX 
 
 ## Introduction
-This lab will walk you through setting up the Security Wingmate page for the APEX application. The chat functionality is a simple setup, while defining the 
+This lab will walk you through setting up the Security Wingmate page for the APEX application. Chat with your Wingmate about policies
 
 Estimated time - 20 minutes
 
@@ -57,6 +57,16 @@ This lab assumes you have the following:
 
 	![left menu for button and dynamic action](./images/dynamic-startwingmate-button.png "")
 
+
+## Task 2: Load Synthetic Data to populate the App
+
+1. Download the SQL file for Multicloud DDL:
+
+	[DDL for Security](https://oraclejamescalise.objectstorage.us-phoenix-1.oci.customer-oci.com/p/tyNihPYQjCiwbL3BDn-AyzU8YZSThfEoeX-yNcjp4tzNoan6ORP31LQpgoK3LyDq/n/oraclejamescalise/b/Wingmate-LL/o/security_ddl.sql)
+
+2. Save the work done in the previous task by clicking the **Save Button** on the top right of the screen.
+
+2. Navigate to the SQL
 
 You may now **proceed to the next lab**.
 
