@@ -154,19 +154,45 @@ Additionally under **Valid for URLs** include the following endpoint for the Gen
 
 ## Task 6: Load Synthetic Data 
 
-1. Navigate to the **SQL Workshop** menu option by selecting the tab at the top.
+1. Navigate to the SQL Workshop by pressing the **SQL Worshop button** at the top, and then **SQL Scripts**.
 
-	![Navigate to SQL Workshop](./images/nav-sql.png "")
+	![SQL Workshop button](./images/sql-workshop.png "")
 
-2. Select **SQL Commands** from the menu shown in the center of the screen. 
 
-	![SQL Commands menu button](./images/nav-sql-commands.png "")
+2. Select **Upload** and upload **wingmate-ddl.sql** in the popup.
 
-3. Download the following SQL file and paste its contents in the console and select **Run**.
+	![Upload DDL script and run button](./images/execute-ddl-script.png "")
 
-	![Run SQL in SQL console](./images/sql-run.png "")
+	![load DDL script and upload button](./images/upload-script.png "")
 
-4. Confirm the data loading is complete.
+
+2. Click the **Run button** to execute the script.
+
+	![Run button](./images/run-sql.png "")
+
+3. Confirm the run script by clicking **Run Now** on the popup at the bottom. 
+
+	![Confirm button](./images/confirm-run.png "")
+
+4. Verify the script ran to completion.
+
+	![Sucessful DDL](./images/ddl-complete.png "")
+
+	>**Note:** If you see any errors, validate the error and identify if any conflicts exists with any tables/views.
+
+5. Navigate to Object Browser by clicking **SQL Workshop** and select **Object Browser**. 
+
+	![load csv navigation](./images/data-workshop.png "")
+
+6. Observe the new tables created and select the first one **CIS_IAM_POLICIES**, and select **Data** and **Load Data** in the center module.
+
+	![load data in tables](./images/data-loading.png "")
+
+7. Verify that the columns are automatically mapped and hit the green **Load Data** button at the bottom. 
+
+	![confirm data load](./images/load-data.png "")
+
+5. Repeat for each table with each dataset located in the unzipped directory.
 
 ## Task 7: (Optional) Connect RESTful data from Tenancy
 
@@ -231,6 +257,12 @@ Additionally under **Valid for URLs** include the following endpoint for the Gen
 13. Validate a successfull data source discovery matches the expected profile. Select **Create REST Data Source** to finish the creation process for the REST endpoint. 
 
 	![Host details of successful discovery](./images/host-details.png "")
+
+	>**Note:** If not all columns are mapped, select **Configure button** to make sure it maps correctly.
+
+	![Configure map button](./images/configure-columns.png "")
+
+	![unmapped column](./images/unmapped-column.png "")
 
 You may now **proceed to the next lab**.
 

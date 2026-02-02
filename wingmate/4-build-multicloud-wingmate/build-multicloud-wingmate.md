@@ -104,17 +104,9 @@ Update the **Welcome Message** from OCI Security Wingmate to OCI MultiCloud Wing
 	SELECT CONTEXT_PROMPT FROM CIS_MULTICLOUD_DETAILS_V
 	</copy>
 	```
-> * **Note:** Any error while pasting the code originate from not updating the DDL in the SQL Developer Web. This will be part of the _Next Task_.
 
-## Task 2: Load Synthetic Data to populate the App
+12. 
 
-1. Download the SQL file for Multicloud DDL:
-
-	[DDL for Multicloud](https://oraclejamescalise.objectstorage.us-phoenix-1.oci.customer-oci.com/p/y3Lylsc7Q2y40oQz8aOudLOENyx2lDEKmQDGnxDHHaxAxdF40ifTE5EneQFyZu0a/n/oraclejamescalise/b/Wingmate-LL/o/multicloud_ddl.sql)
-
-2. Save the work done in the previous task by clicking the **Save Button** on the top right of the screen.
-
-2. Navigate to the SQL
 
 Thank you for completing this lab.
 

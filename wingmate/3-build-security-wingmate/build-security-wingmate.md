@@ -9,7 +9,6 @@ Estimated time - 20 minutes
 
 In this lab, you will:
 * Build a Security Page of Wingmate App
-* Load Synthetic Data to populate the App
 * Test the App's Chat Feature
 
 ### Prerequisites
@@ -49,24 +48,47 @@ This lab assumes you have the following:
 
 	![name the page button](./images/name-wingmate-button.png "")
 
-8. On the left panel, right click the new button and select **Create Dynamic Action**.
+8. Right click the new button and select **Create Dynamic Action**.
 
 	![left menu for button and dynamic action](./images/dynamic-startwingmate-button.png "")
 
-9. On the left panel, right click the new button and select **Create Dynamic Action**.
+9. Name the dynamic action **Chat**.
 
-	![left menu for button and dynamic action](./images/dynamic-startwingmate-button.png "")
+	![Name dynamic action](./images/chat-action.png "")
 
+10. Select the **True** Action on the left panel.
 
-## Task 2: Load Synthetic Data to populate the App
+	![Select true action](./images/select-show.png "")
+	
+11. Select **Show AI Assistant** on the right panel. Select source to match the GenAI credentials from Lab 1. Pastes the following in the **System Prompt**:
 
-1. Download the SQL file for Multicloud DDL:
+	![true action description](./images/show-genai.png "")
 
-	[DDL for Security](https://oraclejamescalise.objectstorage.us-phoenix-1.oci.customer-oci.com/p/tyNihPYQjCiwbL3BDn-AyzU8YZSThfEoeX-yNcjp4tzNoan6ORP31LQpgoK3LyDq/n/oraclejamescalise/b/Wingmate-LL/o/security_ddl.sql)
+12. Right-click **Show AI Assistant** on the left panel and click **Create Action**.
 
-2. Save the work done in the previous task by clicking the **Save Button** on the top right of the screen.
+	![Create action button](./images/create-action.png "")
 
-2. Navigate to the SQL
+13. Select **Hide** for the Action, and under affected elements, select **Button** and **Start Wingmate** for the object.
+
+	![Hide Action Button](./images/hidden-action.png "")
+
+14. Save the work done and view the by clicking the **Green Run Button** on the top right of the screen.
+
+	![Save and Run button](./images/save-and-run.png "")
+
+Task 2: Test the App's Chat Feature
+
+1. On the popup screen, login using the same credentials.
+
+2. On the Security Wingmate page, select **Start Wingmate Chat**. 
+
+	![Start Wingmate button](./images/start-wingmate-chat.png "")
+
+3. Select the first prompt **How many policies do I have in my OCI tenancy?**.
+
+	![Prompt button in chat](./images/use-prompt.png "")
+
+4. Observe and validate the response. Refresh the page to compare the other prompt and validate the data matches expectations.
 
 You may now **proceed to the next lab**.
 
