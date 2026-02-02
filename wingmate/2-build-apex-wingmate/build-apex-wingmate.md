@@ -154,45 +154,49 @@ Additionally under **Valid for URLs** include the following endpoint for the Gen
 
 ## Task 6: Load Synthetic Data 
 
-1. Navigate to the SQL Workshop by pressing the **SQL Worshop button** at the top, and then **SQL Scripts**.
+1. Download the Lab files and unzip:
+
+	[Wingmate Data Zip](https://oraclejamescalise.objectstorage.us-phoenix-1.oci.customer-oci.com/p/72-f7TSP1o3DgeVKmh42oBuft-Q5vvRlyyGq4QPqYl2SI-p5ULJnbKDynL9v1qUO/n/oraclejamescalise/b/Wingmate-LL/o/wingmate_data.zip)
+
+2. Navigate to the SQL Workshop by pressing the **SQL Worshop button** at the top, and then **SQL Scripts**.
 
 	![SQL Workshop button](./images/sql-workshop.png "")
 
 
-2. Select **Upload** and upload **wingmate-ddl.sql** in the popup.
+3. Select **Upload** and upload **wingmate-ddl.sql** in the popup.
 
 	![Upload DDL script and run button](./images/execute-ddl-script.png "")
 
 	![load DDL script and upload button](./images/upload-script.png "")
 
 
-2. Click the **Run button** to execute the script.
+4. Click the **Run button** to execute the script.
 
 	![Run button](./images/run-sql.png "")
 
-3. Confirm the run script by clicking **Run Now** on the popup at the bottom. 
+5. Confirm the run script by clicking **Run Now** on the popup at the bottom. 
 
 	![Confirm button](./images/confirm-run.png "")
 
-4. Verify the script ran to completion.
+6. Verify the script ran to completion.
 
 	![Sucessful DDL](./images/ddl-complete.png "")
 
 	>**Note:** If you see any errors, validate the error and identify if any conflicts exists with any tables/views.
 
-5. Navigate to Object Browser by clicking **SQL Workshop** and select **Object Browser**. 
+7. Navigate to Object Browser by clicking **SQL Workshop** and select **Object Browser**. 
 
 	![load csv navigation](./images/data-workshop.png "")
 
-6. Observe the new tables created and select the first one **CIS_IAM_POLICIES**, and select **Data** and **Load Data** in the center module.
+8. Observe the new tables created and select the first one **CIS_IAM_POLICIES**, and select **Data** and **Load Data** in the center module.
 
 	![load data in tables](./images/data-loading.png "")
 
-7. Verify that the columns are automatically mapped and hit the green **Load Data** button at the bottom. 
+9. Verify that the columns are automatically mapped and hit the green **Load Data** button at the bottom. 
 
 	![confirm data load](./images/load-data.png "")
 
-5. Repeat for each table with each dataset located in the unzipped directory.
+10. Repeat for each table with each dataset located in the unzipped directory.
 
 ## Task 7: (Optional) Connect RESTful data from Tenancy
 
