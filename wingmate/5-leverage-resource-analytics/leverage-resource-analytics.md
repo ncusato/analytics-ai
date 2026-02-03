@@ -2,7 +2,9 @@
 
 ## Introduction
 
-This lab walks the user through provisioning Resource Analytics for creating a data pipeline.
+This lab walks the user through provisioning **Resource Analytics** for creating a data pipeline.
+
+The first lab showed how to load synthetic data, as well as creating an API connection to live tenancy data that can bed fetched to help generate the visuals and reference with the Wingmate chatbot. This lab is unique because it creates a direct connection to the tenancy's resources. 
 
 Estimated time - 20 minutes
 
@@ -18,7 +20,35 @@ Estimated time - 20 minutes
 
 ## Task 1: Provision Resource Analytics
 
-1. 
+1. Navigate to the OCI console and select the **hamburger menu** at the top left. Click the **Observability & Management** menu and scroll to **Resource Analytics**. Click **Instances**.
+
+	![Resource Analytic Menu](./images/nav-ra.png "")
+
+2. Notice the warning at the top, which requires the tenancy admin to perform the prerequisits listed in the documentation. Click **View Details** to perform those actions. Once completed, select **Create Instance**.
+
+	![Create instance button](./images/create-instance.png)
+
+3. Provide a **Name**, **Description**, and select the correct **Compartment**. 
+
+	>* **Note:** Click **View List** to see the services that you can connect to.
+
+	![Name the Resource Analytics Instance](./images/name-ra.png "")
+
+4. Select the **Regions** you want to collect data from. Additionally, select **Input Password** for the Autonomous Data Warehouse Admin Credentials and provide a **Password**.
+
+	![Region and Password for Instance](./images/name-ra.png "")
+
+	>* **Note**: IF you do not have a VCN, Navigate back to the **Hamburger Menu**, under **Networking** select **Virtual Cloud Networks**. Under the Actions button, use the **VCN Wizard** to create a VCN quickly with internet Connectivity.
+
+	![VCN Wizard](./images/vcn-wizard.png "")
+
+5. 	Select a **VCN* and **Subnet** that can serve as a home for GraphStudio, which isn't necessary for our build. Select **Create** at the bottom - leaving everything as default.
+
+	![VCN display](./images/create-complete.png "")
+
+6. Wait for the Provisioning to be complete.
+
+	![Instance Provisioning](./images/provisioning-instance.png "")
 
 ## Task 2: Connect pipeline to Wingmate
 

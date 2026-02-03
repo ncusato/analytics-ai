@@ -97,7 +97,7 @@ Update the **Welcome Message** from OCI Security Wingmate to OCI MultiCloud Wing
 
 	![host insights hidden value](./images/update-hostinsights-computation.png "")
 
-11. Right Click **P5_OCI_HOSTINSIGHTS_DETAILS** and select **Computation**. Paste this under SQL Query:
+11. Right Click **P4_OCI_DATABASE_DETAILS** and select **Computation**. Paste this under SQL Query:
 
 	```
 	<copy/>

@@ -1,7 +1,8 @@
 # Introduction
 
 ## About this Workshop
-The scope of this workshop is to create a Oracle Cloud Infrastructure (OCI) Wingmate that will help monitor the security of a tenancy. This workshop will use Oracle 26ai Autonomous AI Database to store data collected from a tenancy and sanitized for public consumption. 
+The scope of this workshop is to create a Oracle Cloud Infrastructure (OCI) Wingmate that will help monitor the security of a tenancy. This workshop uses Oracle 26ai Autonomous AI Database to store data collected from a tenancy and APEX to generate a dashboard to deliver operational insights never seen before. 
+**Resource Analytics** can be combined to provide near real-time information to enahance the visibility across IT infrastructure.
 
 ![navigate home buttons](./images/cover-page.png "")
 
@@ -54,6 +55,7 @@ You may now **proceed to the next lab**.
 * [Oracle Autonomous Database Documentation](https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/index.html)
 * [Additional Autonomous Database Tutorials](https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/tutorials.html)
 * [Overview of Generative AI Service](https://docs.oracle.com/en-us/iaas/Content/generative-ai/overview.html)
+* [Resource Analytics Product Page](https://www.oracle.com/manageability/resource-analytics/)
 
 
 ## Acknowledgements
