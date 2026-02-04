@@ -114,35 +114,39 @@ Update the **Welcome Message** from OCI Security Wingmate to OCI MultiCloud Wing
 
 	![Sql for Computation](./images/multicloud-details-sql.png "")
 
-12. Create a table for viewing the host period by creating a region to contain it. Expand the **bottom module** (if not open) by selecting the arrow at the bttom center of the screen. Select **Regions** and pick the **Help** icon. Drop it under the Chat Region.
+## Task 2: Generate Report Period View
+
+1. Create a table for viewing the host period by creating a region to contain it. Expand the **bottom module** (if not open) by selecting the arrow at the bttom center of the screen. Select **Regions** and pick the **Help** icon. Drop it under the Chat Region.
 
 	![Help Region](./images/help-region.png "")
 
-13. Name it **Host CPU Insights**.
+2. Name it **Host CPU Insights**.
 
 	![Host CPU Insights name](./images/host-cpu-insights.png "")
 
-14. Drag and drop **Classic Report** into the body of the newly created region.
+3. Drag and drop **Classic Report** into the body of the newly created region.
 
 	![Classic Report in Body](./images/host-cpu-insights-report.png "")
 
-15. Name the Report **ReportPeriod** and select the table **HOSTINSIGHTS_REPORT_PERIOD**.
+4. Name the Report **ReportPeriod** and select the table **HOSTINSIGHTS_REPORT_PERIOD**.
 
 	![Host Insights Report Period Table](./images/report-period-table.png "")
 
-16. Expand the ReportPeriod columns by clicking **the arrow** and and right-click **USAGEUNIT** and **RESOURCEMETRIC**, selecting **Comment Out**
+5. Expand the ReportPeriod columns by clicking **the arrow** and and right-click **USAGEUNIT** and **RESOURCEMETRIC**, selecting **Comment Out**.
 
 	![metrics commented out](./images/metrics-hostinsights.png "")
 
-17. Drag and drop **Static Content** into the sub-region. Name the region **HOST INSIGHTS Metrics**.
+## Task 3: Create Host Insights Widgets
+
+1. Drag and drop **Static Content** into the sub-region. Name the region **HOST INSIGHTS Metrics**.
 
 	![Static Content sub region](./images/host-insights-static.png "")
 
-18. Drag and drop **Chart** in the sub region of the HOST INSIGHTS Metrics static content. Name it **CPU Usage over Capacity**
+2. Drag and drop **Chart** in the sub region of the HOST INSIGHTS Metrics static content. Name it **CPU Usage over Capacity**
 
 	![Host Insights Metrics Chat](./images/chart-host-insights-metrics.png "")
 
-19. Select **Series** under the chart created and name it **CPU Metrics**. Change from Table/View to **SQL Query** and paste the following:
+3. Select **Series** under the chart created and name it **CPU Metrics**. Change from Table/View to **SQL Query** and paste the following:
 
 	```
 	<copy>
@@ -154,7 +158,7 @@ Update the **Welcome Message** from OCI Security Wingmate to OCI MultiCloud Wing
 
 >***Note**: Add mapping with **CPU Usage** for Value and **CPU Capacity** for Maximum Value.  
 
-20. Add another chat to the same sub Region by dragging and dropping **Chart** and naming it **Memory Usage over Capacity**. Select the **Series** and name it **Memory Usage**. Paste the following **SQL Query**:
+4. Add another chart to the same sub Region by dragging and dropping **Chart** and naming it **Memory Usage over Capacity**. Select the **Series** and name it **Memory Usage**. Paste the following **SQL Query**:
 
 	```
 	<copy>
@@ -168,11 +172,13 @@ Update the **Welcome Message** from OCI Security Wingmate to OCI MultiCloud Wing
 
 Next, Visuals for Host Insights across both CPU and Memory will be generated.
 
-21. Drag and drop another **Static Region** into the same sub region as before. Name it **HOST INSIGHTS CPU and MEMORY**. Drag and drop 2 **Chart** Regions inside the body of the static content.
+## Task 4: Compare Insights Across CPU and Memory
+
+1. Drag and drop another **Static Region** into the same sub region as before. Name it **HOST INSIGHTS CPU and MEMORY**. Drag and drop 2 **Chart** Regions inside the body of the static content.
 
 	![Host insights region with 2 charts](./images/host-insights-cpu-memory.png "")
 
-22. Name the first chart **CPU Usage across Host** and for the series, name it **Tasks**. Add the following **SQL Query**:
+2. Name the first chart **CPU Usage across Host** and for the series, name it **Tasks**. Add the following **SQL Query**:
 
 	```
 	<copy>
@@ -191,7 +197,7 @@ Next, Visuals for Host Insights across both CPU and Memory will be generated.
 
 	>***Note**: Select **HOSTNAME** for Label and **USAGE** for Value.
 
-23. Name the second chart **Key Metrics Distribution** and update the series to include **CPU Utilization** and **Memory Utilization**. They both should have type **Line with Area**.
+3. Name the second chart **Key Metrics Distribution** and update the series to include **CPU Utilization** and **Memory Utilization**. They both should have type **Line with Area**.
 	* Update the **CPU Utilization SQL Query** to match:
 
 	```
@@ -214,11 +220,19 @@ Next, Visuals for Host Insights across both CPU and Memory will be generated.
 
 	![CPU Utilization SQL](./images/cpu-utilization.png "")
 
-24. Right click **CPU Usage across Hosts** and select **Duplicate**. Rename it **Memory Usage across Hosts**.
+4. Right click **CPU Usage across Hosts** and select **Duplicate**. Rename it **Memory Usage across Hosts**.
 
 >**Note:** Asjust the Regions to align each of the charts to be aligned on the horizontal axis. 
 
-Thank you for completing this lab.
+## Task 5: Visualize CPU Combinations
+
+## Task 6: Use History to Predict CPU Forecast 
+
+## Task 7: Operationalize Multicloud with Graph
+
+## Task 8: Test the App's Chat Feature
+
+You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
