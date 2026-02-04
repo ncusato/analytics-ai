@@ -9,7 +9,12 @@ Estimated time - 20 minutes
 ### Objectives
 
 * Build a Multicloud Page of Wingmate App
-* Load Synthetic Data to populate the App
+* Generate Report Period View
+* Create Host Insights Widgets
+* Compare Insights Across CPU and Memory
+* Visualize CPU Combinations
+* Use History to Predict CPU Forecast 
+* Operationalize Multicloud with Graph
 * Test the App's Chat Feature
 
 ### Prerequisites
