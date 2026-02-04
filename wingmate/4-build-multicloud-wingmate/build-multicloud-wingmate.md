@@ -157,10 +157,61 @@ Update the **Welcome Message** from OCI Security Wingmate to OCI MultiCloud Wing
 	</copy>
 	```
 
-	![Memory Metrics SQL Query](./images/memory-metrics-sql)
+	![Memory Metrics SQL Query](./images/memory-metrics-sql.png "")
 
+	>***Note**: Add mapping with **Memory Usage** for Value and **Memory Capacity** for Maximum Value. 
 
->***Note**: Add mapping with **Memory Usage** for Value and **Memory Capacity** for Maximum Value. 
+Next, Visuals for Host Insights across both CPU and Memory will be generated.
+
+21. Drag and drop another **Static Region** into the same sub region as before. Name it **HOST INSIGHTS CPU and MEMORY**. Drag and drop 2 **Chart** Regions inside the body of the static content.
+
+	![Host insights region with 2 charts](./images/host-insights-cpu-memory.png "")
+
+22. Name the first chart **CPU Usage across Host** and for the series, name it **Tasks**. Add the following **SQL Query**:
+
+	```
+	<copy>
+	SELECT
+    hostname,
+    capacity,
+    usage,
+    average,
+    usagechangepercent
+	FROM
+    hostinsights_res_stat
+	</copy>
+	```
+
+	![SQL Query CPU Usage](./images/cpu-usage-sql.png "")
+
+	>***Note**: Select **HOSTNAME** for Label and **USAGE** for Value.
+
+23. Name the second chart **Key Metrics Distribution** and update the series to include **CPU Utilization** and **Memory Utilization**. They both should have type **Line with Area**.
+	* Update the **CPU Utilization SQL Query** to match:
+
+	```
+	<copy>
+	select HOSTNAME, 
+       UTILIZATIONPERCENT AS CPU_UTIL, 
+       'CPU Utilization' as MetricType
+	from HOSTINSIGHTS_RES_STAT
+	</copy>
+	```
+	* Update the **Memory Utilization SQL Query** to match:
+	```
+	<copy>
+	select HOSTNAME, 
+       UTILIZATIONPERCENT AS MEM_UTIL, 
+       'MEMORY Utilization' as MetricType
+	from HOSTINSIGHTS_RES_STAT_MEMORY
+	</copy>
+	```
+
+	![CPU Utilization SQL](./images/cpu-utilization.png "")
+
+24. Right click **CPU Usage across Hosts** and select **Duplicate**. Rename it **Memory Usage across Hosts**.
+
+>**Note:** Asjust the Regions to align each of the charts to be aligned on the horizontal axis. 
 
 Thank you for completing this lab.
 
