@@ -1,8 +1,8 @@
 # Introduction
 
 ## About this Workshop
-The scope of this workshop is to create a Oracle Cloud Infrastructure (OCI) Wingmate that will help monitor the security of a tenancy. This workshop uses Oracle 26ai Autonomous AI Database to store data collected from a tenancy and APEX to generate a dashboard to deliver operational insights never seen before. 
-**Resource Analytics** can be combined to provide near real-time information to enahance the visibility across IT infrastructure.
+The scope of this workshop is to create a Oracle Cloud Infrastructure (OCI) Wingmate that will help monitor the security and deliver operations insights of a tenancy. This workshop uses Oracle 26ai Autonomous AI Database to store data collected from a tenancy and APEX to generate a dashboard to deliver operational insights never seen before. 
+**Resource Analytics** can be combined to provide near real-time information to enahance the visibility across IT infrastructure. If this is desired, please skip ahead to **Lab 4** for provisioning the Autonomous Database.
 
 ![navigate home buttons](./images/cover-page.png "")
 
@@ -27,7 +27,6 @@ Generative AI enables users to quickly generate new content based on a variety o
 ### What is Natural Language?
 
 Natural language processing is the ability of a computer application to understand human language as it is spoken and written. It is a component of artificial intelligence (AI). We will leverage Natural Language Processing for our RAG Chatbot to understand user queries and provide relevant responses.
-
 
 
 Estimated time - 1 hour

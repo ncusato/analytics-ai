@@ -97,7 +97,7 @@ Update the **Welcome Message** from OCI Security Wingmate to OCI MultiCloud Wing
 
 	![host insights hidden value](./images/update-hostinsights-computation.png "")
 
-11. Right Click **P4_OCI_DATABASE_DETAILS** and select **Computation**. Paste this under SQL Query:
+11. Right Click **P4_OCI_DATABASE_DETAILS** and select **Create Computation**. Paste this under SQL Query:
 
 	```
 	<copy/>
@@ -105,8 +105,62 @@ Update the **Welcome Message** from OCI Security Wingmate to OCI MultiCloud Wing
 	</copy>
 	```
 
-12. 
+	![Create Computation Button](./images/create-computation.png "")
 
+	![Sql for Computation](./images/multicloud-details-sql.png "")
+
+12. Create a table for viewing the host period by creating a region to contain it. Expand the **bottom module** (if not open) by selecting the arrow at the bttom center of the screen. Select **Regions** and pick the **Help** icon. Drop it under the Chat Region.
+
+	![Help Region](./images/help-region.png "")
+
+13. Name it **Host CPU Insights**.
+
+	![Host CPU Insights name](./images/host-cpu-insights.png "")
+
+14. Drag and drop **Classic Report** into the body of the newly created region.
+
+	![Classic Report in Body](./images/host-cpu-insights-report.png "")
+
+15. Name the Report **ReportPeriod** and select the table **HOSTINSIGHTS_REPORT_PERIOD**.
+
+	![Host Insights Report Period Table](./images/report-period-table.png "")
+
+16. Expand the ReportPeriod columns by clicking **the arrow** and and right-click **USAGEUNIT** and **RESOURCEMETRIC**, selecting **Comment Out**
+
+	![metrics commented out](./images/metrics-hostinsights.png "")
+
+17. Drag and drop **Static Content** into the sub-region. Name the region **HOST INSIGHTS Metrics**.
+
+	![Static Content sub region](./images/host-insights-static.png "")
+
+18. Drag and drop **Chart** in the sub region of the HOST INSIGHTS Metrics static content. Name it **CPU Usage over Capacity**
+
+	![Host Insights Metrics Chat](./images/chart-host-insights-metrics.png "")
+
+19. Select **Series** under the chart created and name it **CPU Metrics**. Change from Table/View to **SQL Query** and paste the following:
+
+	```
+	<copy>
+	SELECT usage as cpu_usage, capacity as cpu_capacity FROM HOSTINSIGHTS_CPU_USAGE_SUMMARY
+	</copy>
+	```
+
+	![CPU Metrics SQL Query](./images/cpu-metrics-sql.png "")
+
+>***Note**: Add mapping with **CPU Usage** for Value and **CPU Capacity** for Maximum Value.  
+
+20. Add another chat to the same sub Region by dragging and dropping **Chart** and naming it **Memory Usage over Capacity**. Select the **Series** and name it **Memory Usage**. Paste the following **SQL Query**:
+
+	```
+	<copy>
+	SELECT usage as mem_usage, capacity as mem_capacity FROM HOSTINSIGHTS_MEMORY_USAGE_SUMMARY
+	</copy>
+	```
+
+	![Memory Metrics SQL Query](./images/memory-metrics-sql)
+
+
+>***Note**: Add mapping with **Memory Usage** for Value and **Memory Capacity** for Maximum Value. 
 
 Thank you for completing this lab.
 
