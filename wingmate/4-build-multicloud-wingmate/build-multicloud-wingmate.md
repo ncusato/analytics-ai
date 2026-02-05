@@ -4,7 +4,7 @@
 
 This lab walks the user through the creation of a multicloud Wingmate dashboard. This is helpful for managing compute and resources across multiple cloud service providors. 
 
-Estimated time - 20 minutes
+Estimated time - 60 minutes
 
 ### Objectives
 
@@ -14,7 +14,7 @@ Estimated time - 20 minutes
 * Compare Insights Across CPU and Memory
 * Visualize CPU Combinations
 * Use History to Predict CPU Forecast 
-* Operationalize Multicloud with Graph
+* Operationalize Multicloud with Property Graph
 * Test the App's Chat Feature
 
 ### Prerequisites
@@ -64,13 +64,33 @@ Estimated time - 20 minutes
 
 Update the **Welcome Message** from OCI Security Wingmate to OCI MultiCloud Wingmate as well.
 
-7. Navigate to the bottom of the Navigation Tree to the hidden items. Select the OCI_CLOUDGUARD and rename it to **P4_OCI_HOSTINSIGHTS_DETAILS** on the right side Indentification. 
+7. Select the table previously created in the last lab that copied over named **Identity and Access Management**.
+
+	![Identity Table](./images/update-identity.png "")
+
+8. Update the name **Multicloud Insights** and change the **SQL Query** to the following:
+
+	```
+	<copy>
+	select * from oci_exa_infr
+	union
+	select * from oci_exa_vm_cluster
+	union
+	select * from oci_cdb
+	union
+	select * from oci_pdb
+	</copy>
+	```
+
+	![SQL Query for Multicloud Insights](./images/multicloud-insights.png "")
+
+9. Navigate to the bottom of the Navigation Tree to the hidden items. Select the OCI_CLOUDGUARD and rename it to **P4_OCI_HOSTINSIGHTS_DETAILS** on the right side Indentification. 
 
 	![select hidden value](./images/select-hidden.png "")
 
 	![rename hidden](./images/update-hidden.png "")
 
-8. Update the computation as the following:
+10. Update the computation as the following:
 
 	```
 	<copy/>
@@ -80,13 +100,13 @@ Update the **Welcome Message** from OCI Security Wingmate to OCI MultiCloud Wing
 
 	![update computation](./images/update-computation.png "")
 
-9. Create another **Hidden Item** by right clicking **P4_HOSTINSIGHTS_Listed**, selecting **Duplicate** and name it: **P4_OCI_HOSTINSIGHTS_DETAILS** 
+11. Create another **Hidden Item** by right clicking **P4_HOSTINSIGHTS_Listed**, selecting **Duplicate** and name it: **P4_OCI_HOSTINSIGHTS_DETAILS** 
 
 	![create hidden item](./images/duplicate-hidden.png "")
 
 	![host insights hidden value](./images/update-hostinsights-name.png "")
 
-10. Right Click **P4_OCI_HOSTINSIGHTS_DETAILS** and select **Create Computation**. Paste this under **SQL Query** on the right side:
+12. Right Click **P4_OCI_HOSTINSIGHTS_DETAILS** and select **Create Computation**. Paste this under **SQL Query** on the right side:
 
 	```
 	<copy/>
@@ -96,13 +116,13 @@ Update the **Welcome Message** from OCI Security Wingmate to OCI MultiCloud Wing
 
 	![host insights hidden value](./images/update-hostinsights-computation.png "")
 
-10. Repeat **Step 9** to create another hidden item named **P4_OCI_DATABASE_DETAILS**
+13. Repeat **Step 9** to create another hidden item named **P4_OCI_DATABASE_DETAILS**
 
 	![create hidden item](./images/duplicate-hidden-details.png "")
 
 	![host insights hidden value](./images/update-hostinsights-computation.png "")
 
-11. Right Click **P4_OCI_DATABASE_DETAILS** and select **Create Computation**. Paste this under SQL Query:
+14. Right Click **P4_OCI_DATABASE_DETAILS** and select **Create Computation**. Paste this under SQL Query:
 
 	```
 	<copy/>
@@ -228,7 +248,37 @@ Next, Visuals for Host Insights across both CPU and Memory will be generated.
 
 ## Task 6: Use History to Predict CPU Forecast 
 
-## Task 7: Operationalize Multicloud with Graph
+## Task 7: Operationalize Multicloud with Property Graph
+
+>**Note:** This task requires downloading a **Plug-in** to install for visualizing the SQL property graphs in APEX. Learn more by reading through the [documentation.](https://docs.oracle.com/en/database/oracle/property-graph/26.1/spgdg/visualizing-sql-graph-queries-using-apex-graph-visualization-plug.html#GUID-29126F4F-FF5E-4712-9BFE-535F2451AD3A)
+
+1. Download the sql file from the github repo by clicking the link. Right-click in the new tab window and select **Save As**: [region_type_plugin_graphviz.sql](https://raw.githubusercontent.com/oracle/apex/3bb6d39634560035cac57743bbe232d2fb5cae2d/plugins/region/graph-visualization/region_type_plugin_graphviz.sql)
+
+	![Graph Viz SQL file](./images/graph-viz-sql-file.png "")
+
+2. Navigate to **App Builder** and the **Wingmate App**. Select **Import/Export**.
+
+	![Import and Export Button](./images/import-export-app-builder.png "")
+
+3. Drag and drop the **region_type_plugin_graphviz.sql file**, select **Plugin** and **Next**.
+
+	![import plugin](./images/import-plugin.png "")
+
+4. Select **Next** to proceed with the import.
+
+	![import confirmation](./images/confirm-import.png "")
+
+5. Select **Import** to begin the import of the plug-in.
+
+	![import process confirmation](./images/install-plugin.png "")
+
+6. Verify the plug-in was installed correctly. Navigate back to the **Multicloud Overview** page of the app by selecting the **Application 100** in the breadcrubs bar and select the page.
+
+	>**Note:**  Notice the settings of **Page size** that can be modified if needed and this is available via **Shared Components** -> **Component Settings** (via the breadcrumbs).
+
+	![verification of plugin installation](./images/plugin-success.png "")
+
+
 
 ## Task 8: Test the App's Chat Feature
 
@@ -237,6 +287,6 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 
 * **Authors:**
-	* Royce Fu - Master Principle Cloud Architect
 	* Nicholas Cusato - Cloud Architect
+	* Royce Fu - Master Principle Cloud Architect
 * **Last Updated by/Date** - Nicholas Cusato, Febuary 2026

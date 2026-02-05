@@ -59,6 +59,6 @@ Thank you for completing this lab.
 ## Acknowledgements
 
 * **Authors:**
-	* Royce Fu - Master Principle Cloud Architect
 	* Nicholas Cusato - Cloud Architect
+	* Royce Fu - Master Principle Cloud Architect
 * **Last Updated by/Date** - Nicholas Cusato, Febuary 2026
