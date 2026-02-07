@@ -12,10 +12,9 @@ Estimated time - 60 minutes
 * Generate Report Period View
 * Create Host Insights Widgets
 * Compare Insights Across CPU and Memory
-* Visualize CPU Combinations
-* Use History to Predict CPU Forecast 
+* Visualize CPU Combinations for Historical and Forecast Analysis
 * Operationalize Multicloud with Property Graph
-* Test the App's Chat Feature
+* Review the Multicloud's Insights
 
 ### Prerequisites
 
@@ -574,6 +573,10 @@ Next, Visuals for Host Insights across both CPU and Memory will be generated.
 
 	![SQL for Min Forecast](./images/cpu-historic-usage-bar-forecast-min-sql.png "")
 
+26. Save the work by clicking the **Save button** at the top right.
+
+	![Save page button](./images/save-page.png "")
+
 ## Task 7: Operationalize Multicloud with Property Graph
 
 >**Note:** This task requires downloading a **Plug-in** to install for visualizing the SQL property graphs in APEX. Learn more by reading through the [documentation.](https://docs.oracle.com/en/database/oracle/property-graph/26.1/spgdg/visualizing-sql-graph-queries-using-apex-graph-visualization-plug.html#GUID-29126F4F-FF5E-4712-9BFE-535F2451AD3A)
@@ -604,9 +607,35 @@ Next, Visuals for Host Insights across both CPU and Memory will be generated.
 
 	![verification of plugin installation](./images/plugin-success.png "")
 
+7. Navigate back to the **Multicloud Overview** page by selecting the **Multicloud Overview** page.
 
+	![Multicloud Overview Page Icon](./images/multicloud-page.png "")
 
-## Task 8: Test the App's Chat Feature
+8. Drag and drop the **Graph Visualization plugin** from the regions object selector.
+
+	![Graph Visualization Region](./images/graph-region.png "")
+
+9. Name the region **Multicloud Insights**.
+
+	![Multicloud Insights name](./images/multicloud-name.png "")
+
+10. Scroll down and update the Source Type to **SQL Query** and paste the following SQL:
+
+	```
+	<copy>
+	select * from oci_exa_infr
+	union
+	select * from oci_exa_vm_cluster
+	union
+	select * from oci_cdb
+	union
+	select * from oci_pdb
+	</copy>
+	```
+
+	![SQL Query for Graph visualization](./images/multicloud-insights.png "")
+
+## Task 8: Review the Multicloud's insights
 
 You may now **proceed to the next lab**.
 
