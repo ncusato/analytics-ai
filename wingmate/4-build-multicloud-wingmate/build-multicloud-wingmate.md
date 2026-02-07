@@ -84,6 +84,8 @@ Update the **Welcome Message** from OCI Security Wingmate to OCI MultiCloud Wing
 
 	![SQL Query for Multicloud Insights](./images/multicloud-insights.png "")
 
+	>**Note:** This will serve as the bottom of the dashboard so any regions created will be place above this table. 
+
 9. Navigate to the bottom of the Navigation Tree to the hidden items. Select the OCI_CLOUDGUARD and rename it to **P4_OCI_HOSTINSIGHTS_DETAILS** on the right side Indentification. 
 
 	![select hidden value](./images/select-hidden.png "")
@@ -166,7 +168,19 @@ Update the **Welcome Message** from OCI Security Wingmate to OCI MultiCloud Wing
 
 	![Host Insights Metrics Chat](./images/chart-host-insights-metrics.png "")
 
-3. Select **Series** under the chart created and name it **CPU Metrics**. Change from Table/View to **SQL Query** and paste the following:
+3. Select **Attributes** at the top of the right module and change the chart type to **Status Gauge**. 
+
+	![Status Gauge](./images/cpu-gauge.png "")
+
+4. Update the style of the guage by scrolling down on the right and change the **Indicator Size** to **.5** and **Inner Radius** to **.9**. 
+
+	![Guage style Update](./images/cpu-gauge-size.png "")
+
+5. Scroll down more change **Value** and **Format** to **Percent** with 0 decimal places.
+
+	![Status Gauge](./images/cpu-gauge-percent.png "")
+
+6. Select **Series** under the chart created and name it **CPU Metrics**. Change from Table/View to **SQL Query** and paste the following:
 
 	```
 	<copy>
@@ -176,9 +190,17 @@ Update the **Welcome Message** from OCI Security Wingmate to OCI MultiCloud Wing
 
 	![CPU Metrics SQL Query](./images/cpu-metrics-sql.png "")
 
->***Note**: Add mapping with **CPU Usage** for Value and **CPU Capacity** for Maximum Value.  
+7. Scroll down and add a mapping of **CPU Usage** for **Label** and **Value** and **CPU Capacity** for **Maximum Value**.  
 
-4. Add another chart to the same sub Region by dragging and dropping **Chart** and naming it **Memory Usage over Capacity**. Select the **Series** and name it **Memory Usage**. Paste the following **SQL Query**:
+	![CPU mapping](./images/cpu-gauge-mapping.png "")
+
+8. Right-click to duplicate the **CPU Usage Over Capcity** Guage. Update the **Name** to **Memory Usage over Capacity**. Select **Atributes** and adjust the Guage size:
+	* Indicator Size: **.5**
+	* Inner Radius: **.6**
+
+	![Memory Metrics](./images/memory-gauge-size.png "")
+
+9. Select Series and rename it **Memory Metrics**. Update the SQL Query to the folowing:
 
 	```
 	<copy>
@@ -188,17 +210,31 @@ Update the **Welcome Message** from OCI Security Wingmate to OCI MultiCloud Wing
 
 	![Memory Metrics SQL Query](./images/memory-metrics-sql.png "")
 
-	>***Note**: Add mapping with **Memory Usage** for Value and **Memory Capacity** for Maximum Value. 
+10. Scroll down and change the mapping with **Memory Usage** for **Label** and **Value** and **Memory Capacity** for **Maximum Value**. 
+
+	![Memory Guage Mapping](./images/memory-guage-mapping.png "")
 
 Next, Visuals for Host Insights across both CPU and Memory will be generated.
 
 ## Task 4: Compare Insights Across CPU and Memory
 
-1. Drag and drop another **Static Region** into the same sub region as before. Name it **HOST INSIGHTS CPU and MEMORY**. Drag and drop 2 **Chart** Regions inside the body of the static content.
+1. Drag and drop another **Static Region** into the same region **Host CPU Insights**. Name this Sub Region **HOST INSIGHTS CPU and MEMORY**. 
 
-	![Host insights region with 2 charts](./images/host-insights-cpu-memory.png "")
+	![Host insights region](./images/host-insights-cpu-memory-name.png "")
 
-2. Name the first chart **CPU Usage across Host** and for the series, name it **Tasks**. Add the following **SQL Query**:
+2. Drag and drop a chart into the Body and name it **CPU Usage across Host**. 
+
+	![CPU Usage across hosts name](./images/cpu-usage-across-hosts.png "")
+
+3. Select Attributes and change it to **Pie**. 
+
+	![Chart Attributes](./images/cpu-usage-across-hosts-pie.png "")
+
+4. Scroll down and toggle off **Dim On Hover** and select **Highlight and Explode** for **Settings**.
+
+	![Pie settings](./images/cpu-usage-across-hosts-settings.png "")
+
+3. For the series, name it **Tasks**. Add the following **SQL Query**:
 
 	```
 	<copy>
@@ -215,10 +251,25 @@ Next, Visuals for Host Insights across both CPU and Memory will be generated.
 
 	![SQL Query CPU Usage](./images/cpu-usage-sql.png "")
 
-	>***Note**: Select **HOSTNAME** for Label and **USAGE** for Value.
+4. Scroll down and Select **HOSTNAME** for Label and **USAGE** for Value.
 
-3. Name the second chart **Key Metrics Distribution** and update the series to include **CPU Utilization** and **Memory Utilization**. They both should have type **Line with Area**.
-	* Update the **CPU Utilization SQL Query** to match:
+	![CPU usage across hosts Column Mapping](./images/cpu-usage-across-hosts-mapping.png "")
+
+5. Drag and drop a second chart next to CPU Usage across Hosts and name it **Key Metrics Distribution**.
+
+	![Key Metrics Chart](./images/key-metrics-drop.png "")
+
+6. Select **Attributes** and change chart type to **Polar**.
+
+	![Key Metrics Chart Type](./images/key-metrics-polar.png "")
+
+7. Scroll down and toggle **Stack** under Appearance to **ON**.
+
+	![Appearance toggle](./images/key-metrics-stack.png "")
+
+8. Update the series name to **CPU Utilization** and change the type to **Line with Area**.
+
+9. Update the **CPU Utilization SQL Query** to match:
 
 	```
 	<copy>
@@ -228,25 +279,300 @@ Next, Visuals for Host Insights across both CPU and Memory will be generated.
 	from HOSTINSIGHTS_RES_STAT
 	</copy>
 	```
-	* Update the **Memory Utilization SQL Query** to match:
-	```
-	<copy>
-	select HOSTNAME, 
-       UTILIZATIONPERCENT AS MEM_UTIL, 
-       'MEMORY Utilization' as MetricType
-	from HOSTINSIGHTS_RES_STAT_MEMORY
-	</copy>
-	```
 
 	![CPU Utilization SQL](./images/cpu-utilization.png "")
 
-4. Right click **CPU Usage across Hosts** and select **Duplicate**. Rename it **Memory Usage across Hosts**.
+10. Scroll down and update the mapping to the following:
+	* Label: **HOSTNAME**
+	* Value: **CPU_UTIL**
 
->**Note:** Asjust the Regions to align each of the charts to be aligned on the horizontal axis. 
+	![CPU utilization mapping](./images/key-metrics-cpu-mapping.png "")
 
-## Task 5: Visualize CPU Combinations
+11. Right-click **Series** and select **Create Series**.
 
-## Task 6: Use History to Predict CPU Forecast 
+	![Create Series](./images/create-series.png "")
+
+12. Name the Series **Memory Utilization** and change **Type** to **Line with Area**.
+
+	![Memory Utilization type](./images/key-metrics-memory.png "")
+
+13. Scroll down and change **Type** to **SQL Query** and paste the following into the query box:
+
+	```
+	<copy>
+	select HOSTNAME, 
+		UTILIZATIONPERCENT AS MEM_UTIL, 
+		'MEMORY Utilization' as MetricType
+	from VECTOR.HOSTINSIGHTS_RES_STAT_MEMORY
+	</copy>
+	```
+
+	![SQL Query Memory Utilization](./images/key-metrics-memory-query.png "")
+
+14. Right click **CPU Usage across Hosts** and select **Duplicate**. Rename the new chart: **Memory Usage across Hosts**.
+
+	![Memory Usage Chart name](./images/memory-usage-name.png "")
+
+15. Select the **Tasks** Series and update the SQL Query to the following:
+
+	```
+	<copy>
+	SELECT
+    hostname,
+    capacity,
+    usage,
+    average,
+    usagechangepercent
+	FROM
+    hostinsights_res_stat_memory
+	</copy>
+	```
+
+	![Memory Usage SQL Query](./images/memory-usage-query.png "")
+
+16. Adjust the Charts to be aligned on the horizontal axis by selecting the new chart in the ceneter module and dragging it to the right of the **Key Metrics Distribution Chart**.
+
+	![Drag and drop Chart](./images/drag-memory.png "")
+
+## Task 5: Visualize CPU Combinations for Historical and Forecasting Analysis
+
+1. Drag and drop a **static region** into the body of **Host CPU Insights** and name it **CPU Combination Chart**.
+
+	![CPU Combination Chart Region](./images/cpu-usage-historic-region.png "")
+
+	![CPU Combination Name](./images/cpu-combination-name.png "")
+
+2. Drag and drop a **chart** into the body of **CPU Combination Chart** region. Name it **CPU Usage Historic and Forecast**.
+
+	![CPU Usage historic name](./images/cpu-usage-historic-name.png "")
+
+3. Change the chart type to **Combination**.
+
+	![Combination chart type](./images/cpu-usage-historic-combination.png "")
+
+4. Untoggle the **Dim on Hover** to off.
+
+	![CPU Dim on hover off](./images/cpu-combination-toggle.png "")
+
+5. Select the **Series** and rename it to **CPU Historic Usage**.
+
+	![CPU Historic Usage Name](./images/cpu-historic-usage.png "")
+
+6. Scroll down and paste the following SQL Query:
+
+	```
+	<copy>
+	SELECT 
+    to_char(cut.endTimestamp, 'DD-MON-YYYY HH24:MI:SS') AS HISTORIC_TIMESTAMP,
+    cut.usage as historical_usage,
+    'CPU Historic Usage' as CPU_HIST
+	FROM 
+    HOSTINSIGHTS_CPU_FORECAST_TREND CPU_FORECAST_TREND,
+    JSON_TABLE(
+        CPU_FORECAST_TREND.HISTORICALDATA,
+        '$[*]' 
+        COLUMNS (
+            endTimestamp DATE PATH '$.endTimestamp',
+            usage NUMBER PATH '$.usage'
+        )
+    ) cut
+	ORDER BY cut.endTimestamp ASC
+	</copy>
+	```
+
+	![CPU Historic Usage](./images/cpu-historic-usage-sql.png "")
+
+7. Scroll down and update the **Column Mapping** to the following:
+	*Label: **HISTORIC_TIMESTAMP**
+	*Value: **HISTORICAL_USAGE**
+
+	![Column Mapping](./images/cpu-historic-mapping.png "")
+
+8. Right-click **Series** and select **Create Series**.
+
+	![Create Series button](./images/create-series-forecast.png "")
+
+9. Name the new series **CPU Forecast Usage** and select the type as **Line with Area**
+
+	![Name CPU Forecast](./images/cpu-forecast-name.png "")
+
+10. Scroll down and change the source to **SQL Query** and paste the following SQL Query:
+
+	```
+	<copy>
+	SELECT 
+    to_char(cft.endTimestamp, 'DD-MON-YYYY HH24:MI:SS') AS PROJECTED_TIMESTAMP,
+    cft.usage as projected_usage,
+    cft.highValue as projected_highValue,
+    cft.lowValue as projected_lowValue,
+    'CPU Historic Usage' as CPU_HIST    
+	FROM 
+    HOSTINSIGHTS_CPU_FORECAST_TREND CPU_FORECAST_TREND,
+    JSON_TABLE(
+        CPU_FORECAST_TREND.PROJECTEDDATA,
+        '$[*]' 
+        COLUMNS (
+            endTimestamp DATE PATH '$.endTimestamp',
+            usage NUMBER PATH '$.usage',
+            highValue NUMBER PATH '$.highValue',
+            lowValue NUMBER PATH '$.lowValue'
+        )
+    ) cft
+	ORDER BY cft.endTimestamp ASC
+	</copy>
+	```
+
+	![SQL Query CPU Forecast](./images/cpu-forecast-usage-sql.png "")
+
+11. Drag and drop a **Chart** inside the body of **CPU Combination Chart** region. 
+
+	![CPU Usage Chart](./images/cpu-usage-drop.png "")
+
+12. Name the chart **CPU Usage Historic and Forecast - Mixed Frequency**.
+
+	![Name of CPU Usage](./images/cpu-usage-mixed-name.png "")
+
+13. Select **Attributes** and change the Type to **Combination**.
+
+	![Mixed Frequency Combination Chart Type](./images/cpu-usage-mixed-combination.png "")
+
+14. Scroll down and change the settings for Time Axis Type to **Mixed Frequency**.
+
+	![Mixed Frequency Settings](./images/cpu-usage-mixed-settings.png "")
+
+15. Select the **Series** and change the name to **CPU Historic Usage**. 
+
+	![CPU Historic Usage name](./images/cpu-historic-usage-bar.png "")
+
+16. Scroll down and select **SQL Query** and paste the followign SQL:
+
+	```
+	<copy>
+	SELECT 
+    to_char(cut.endTimestamp, 'DD-MON-YYYY HH24:MI:SS') AS HISTORIC_TIMESTAMP,
+    cut.usage as historical_usage,
+    'CPU Historic Usage' as CPU_HIST
+	FROM 
+    HOSTINSIGHTS_CPU_FORECAST_TREND CPU_FORECAST_TREND,
+    JSON_TABLE(
+        CPU_FORECAST_TREND.HISTORICALDATA,
+        '$[*]' 
+        COLUMNS (
+            endTimestamp DATE PATH '$.endTimestamp',
+            usage NUMBER PATH '$.usage'
+        )
+    ) cut
+	ORDER BY cut.endTimestamp ASC
+	</copy>
+	```
+
+	![CPU Historic Usage SQL](./images/cpu-historic-usage-bar-sql.png "")
+
+17. Right-click **Series** and select **Create Series**. 
+
+	![Create series button](./images/cpu-historic-usage-bar-create-series.png "")
+
+18. Name the series **CPU Forecast MAX** and change the Type to **Line**.
+
+	![CPU Forecast MAX Line](./images/cpu-historic-usage-bar-forecast-max.png "")
+
+19. Scroll down and change the Source Type to **SQL Query** and paste the following in the SQL Query:
+
+	```
+	<copy>
+	SELECT 
+    to_char(cft.endTimestamp, 'DD-MON-YYYY HH24:MI:SS') AS PROJECTED_TIMESTAMP,
+    cft.highValue as projected_highValue,
+    'CPU Forecast Max Usage' as CPU_FORECAST_MAX  
+	FROM 
+    HOSTINSIGHTS_CPU_FORECAST_TREND CPU_FORECAST_TREND,
+    JSON_TABLE(
+        CPU_FORECAST_TREND.PROJECTEDDATA,
+        '$[*]' 
+        COLUMNS (
+            endTimestamp DATE PATH '$.endTimestamp',
+            usage NUMBER PATH '$.usage',
+            highValue NUMBER PATH '$.highValue',
+            lowValue NUMBER PATH '$.lowValue'
+        )
+    ) cft
+	ORDER BY cft.endTimestamp ASC
+	</copy>
+	```
+
+	![SQL for Max Forecast](./images/cpu-historic-usage-bar-forecast-max-sql.png "")
+
+20. Right-click **Series** and select **Create Series**.
+
+	![Create series button](./images/cpu-historic-usage-bar-create-series.png "")
+
+21. Name the series **CPU Forecast Usage** and change the Type to **Line**.
+
+	![CPU Forecast Usage Line](./images/cpu-historic-usage-bar-forecast-usage.png "")
+
+22. Scroll down and change the Source Type to **SQL Query** and paste the following in the SQL Query:
+
+	```
+	<copy>
+	SELECT 
+    to_char(cft.endTimestamp, 'DD-MON-YYYY HH24:MI:SS') AS PROJECTED_TIMESTAMP,
+    cft.usage as projected_usage,
+    cft.highValue as projected_highValue,
+    cft.lowValue as projected_lowValue,
+    'CPU Forecast Usage' as CPU_FORECAST
+	FROM 
+    HOSTINSIGHTS_CPU_FORECAST_TREND CPU_FORECAST_TREND,
+    JSON_TABLE(
+        CPU_FORECAST_TREND.PROJECTEDDATA,
+        '$[*]' 
+        COLUMNS (
+            endTimestamp DATE PATH '$.endTimestamp',
+            usage NUMBER PATH '$.usage',
+            highValue NUMBER PATH '$.highValue',
+            lowValue NUMBER PATH '$.lowValue'
+        )
+    ) cft
+	ORDER BY cft.endTimestamp ASC
+	</copy>
+	```
+
+	![SQL for Usage Forecast](./images/cpu-historic-usage-bar-forecast-usage-sql.png "")
+
+23. Right-click **Series** and select **Create Series**.
+
+	![Create series button](./images/cpu-historic-usage-bar-create-series.png "")
+
+24. Name the series **CPU Forecast MIN** and change the Type to **Line**.
+
+	![CPU Forecast MIN Line](./images/cpu-historic-usage-bar-forecast-min.png "")
+
+25. Scroll down and change the Source Type to **SQL Query** and paste the following in the SQL Query:
+
+	```
+	<copy>
+	SELECT 
+    to_char(cft.endTimestamp, 'DD-MON-YYYY HH24:MI:SS') AS PROJECTED_TIMESTAMP,
+    cft.usage as projected_usage,
+    cft.highValue as projected_highValue,
+    cft.lowValue as projected_lowValue,
+    'CPU Forecast Usage' as CPU_FORECAST
+	FROM 
+    HOSTINSIGHTS_CPU_FORECAST_TREND CPU_FORECAST_TREND,
+    JSON_TABLE(
+        CPU_FORECAST_TREND.PROJECTEDDATA,
+        '$[*]' 
+        COLUMNS (
+            endTimestamp DATE PATH '$.endTimestamp',
+            usage NUMBER PATH '$.usage',
+            highValue NUMBER PATH '$.highValue',
+            lowValue NUMBER PATH '$.lowValue'
+        )
+    ) cft
+	ORDER BY cft.endTimestamp ASC
+	</copy>
+	```
+
+	![SQL for Min Forecast](./images/cpu-historic-usage-bar-forecast-min-sql.png "")
 
 ## Task 7: Operationalize Multicloud with Property Graph
 
