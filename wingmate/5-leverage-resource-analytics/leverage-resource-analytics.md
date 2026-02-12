@@ -42,7 +42,7 @@ Estimated time - 20 minutes
 
 	![VCN Wizard](./images/vcn-wizard.png "")
 
-5. 	Select a **VCN* and **Subnet** that can serve as a home for GraphStudio, which isn't necessary for our build. Select **Create** at the bottom - leaving everything as default.
+5. 	Select a **VCN** and **Subnet**. Select **Create** at the bottom - leaving everything as default.
 
 	![VCN display](./images/create-complete.png "")
 
@@ -52,7 +52,7 @@ Estimated time - 20 minutes
 
 ## Task 2: Connect pipeline to Wingmate
 
-1. 
+The Resource Analytics provisions an Autonomous AI Database in a private subnet. In order to view the data and import our Wingmate App, a VM in a public subnet is required to connect and access the Web SQL Developer. Installing NoVNC on the instance will allow for browser access. 
 
 Thank you for completing this lab.
 

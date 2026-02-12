@@ -623,13 +623,10 @@ Next, Visuals for Host Insights across both CPU and Memory will be generated.
 
 	```
 	<copy>
-	select * from oci_exa_infr
-	union
-	select * from oci_exa_vm_cluster
-	union
-	select * from oci_cdb
-	union
-	select * from oci_pdb
+	SELECT * FROM GRAPH_TABLE(MULTICLOUD_GRAPH
+    MATCH (a) -[e]-> (b) - [f] -> (c) - [g] -> (d)
+    COLUMNS(vertex_id(a) as aid, edge_id(e) as eid, vertex_id(b) as bid, edge_id(f) as fid, vertex_id(c) as cid, edge_id(g) as gid, vertex_id(d) as did)
+	);
 	</copy>
 	```
 

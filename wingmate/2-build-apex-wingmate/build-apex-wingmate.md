@@ -4,9 +4,9 @@
 
 This lab walks the user on how to provision an Autonomous AI Database, generate API keys, and use these keys to connect Oracle GenAI services to the APEX application. Using synthetic data, the Security and Multicloud data will be modeled in the database as a reference for the GenAI services. Additionally, RESTful data collection from the tenancy can collected to generate live reporting of the Tenancy. This provides the Wingmate Application a streamlined observability into the tenancy operations using natural language.
 
-> **Note:** For reference, the list of available APIs that can be utilized for the optional Lab #7: [OCI API Reference and Endpoints](https://docs.oracle.com/en-us/iaas/api/)
+> **Note:** For reference, the list of available APIs that can be utilized for the optional Task #7: [OCI API Reference and Endpoints](https://docs.oracle.com/en-us/iaas/api/)
 
-Estimated time - 20 minutes
+Estimated time - 30 minutes
 
 ### Objectives
 
@@ -23,7 +23,7 @@ Estimated time - 20 minutes
 * An OCI cloud account
 * Subscription to US-Central Chicago, US-Ashburn-1, or US-Phoenix-1 Region
 
-## Task 1: Provision a Oracle AI Database 26ai ADB  and APEX App
+## Task 1: Provision a Oracle AI Database 26ai (ADB) and APEX App
 
 1. Navitage to the OCI home console and expand the side-menu bar.
 
@@ -33,7 +33,9 @@ Estimated time - 20 minutes
 
 	![Navigate to Autonmous Database](./images/nav-adb.png "")
 
-3. Ensure you are in the correct compartment and select **Create Autonmous AI Database**. The region in which you provision the ADB doesn't matter as much as the previous GenAI services Lab as the ADB will use the service route to access the model. 
+3. Ensure you are in the correct compartment and select **Create Autonmous AI Database**. 
+
+	>***Note:**The region in which you provision the ADB doesn't matter as much as the previous GenAI services Lab as the ADB will use the service route to access the model. 
 
 	![Console create ADB button](./images/create-adb-button.png "")
 
@@ -49,7 +51,7 @@ Estimated time - 20 minutes
 
 6. Enter your password used during the creation of the ADB and click **Sign in to Administration**.
 
-	![Signin to Admin Portal](./images/access-admin.png "")
+	![Sign in to Admin Portal](./images/access-admin.png "")
 
 7. Create a new workspace by clicking **Create Workspace**.
 
@@ -188,7 +190,7 @@ Additionally under **Valid for URLs** include the following endpoint for the Gen
 
 	![load csv navigation](./images/data-workshop.png "")
 
-8. Observe the new tables created and select the first one **CIS_IAM_POLICIES**, and select **Data** and **Load Data** in the center module.
+8. Observe the new tables created and select the first one **CIS\_IAM\_POLICIES**, and select **Data** and **Load Data** in the center module.
 
 	![load data in tables](./images/data-loading.png "")
 
@@ -220,15 +222,12 @@ Additionally under **Valid for URLs** include the following endpoint for the Gen
 
 	![Create RESTfull Data source from scratch button](./images/create-from-scratch.png "")
 
-6. Name the service, such as the following **HostInsightsSummary** and paste an endpoint URL for example: 
-* **https://operationsinsights.us-ashburn-1.oci.oraclecloud.com/20200630/hostInsights/resourceStatistics**
+6. Name the service, such as the following **HostInsightsSummary** and paste an endpoint URL and select **Next**. For example endpoint: 
+	* **https://operationsinsights.us-ashburn-1.oci.oraclecloud.com/20200630/hostInsights/resourceStatistics**
 
 	> **Note:** For full list of endpoints, please check [Oracle Docs](https://docs.oracle.com/en-us/iaas/api/).
-	
-	Select **Next**.
 
 	![Create RESTfull Data source from scratch button](./images/endpoint-name.png "")
-
 
 7. Validate the endpoint and select **Next**.
 

@@ -3,7 +3,7 @@
 ## Introduction
 This lab will walk you through setting up the Security Wingmate page for the APEX application. Chat with your Wingmate about policies
 
-Estimated time - 20 minutes
+Estimated time - 10 minutes
 
 ### Objectives
 
@@ -76,9 +76,9 @@ This lab assumes you have the following:
 
 	![Save and Run button](./images/save-and-run.png "")
 
-Task 2: Test the App's Chat Feature
+## Task 2: Test the App's Chat Feature
 
-1. On the popup screen, login using the same credentials.
+1. On the popup screen, login using the same credentials from when you created the workspace. 
 
 2. On the Security Wingmate page, select **Start Wingmate Chat**. 
 
