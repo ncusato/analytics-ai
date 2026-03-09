@@ -2,7 +2,14 @@
 
 ## About this Workshop
 The scope of this workshop is to create a Oracle Cloud Infrastructure (OCI) Wingmate that will help monitor the security and deliver operations insights of a tenancy. This workshop uses Oracle 26ai Autonomous AI Database to store data collected from a tenancy and APEX to generate a dashboard to deliver operational insights never seen before. 
-**Resource Analytics** can be combined to provide near real-time information to enahance the visibility across IT infrastructure. If this is desired, please skip ahead to **Lab 4** for provisioning the Autonomous Database.
+**Resource Analytics** is a new product on OCI that provides near real-time information to enahance the visibility across IT infrastructure. This lab will serve as a guide for new users looking to get started with Resource Analytics and start building using APEX.
+
+The lab was deisgned to enable a user to develop an app from scratch using a combination of data sources: synthetic flat files, RESTful API, and/or Resource Analytics. 
+* First, for convience, synthetic data was populated into flat files (CSVs) to simulate batch data gathered from an API or other methods. 
+* Second, RESTful API direct connection is simulated by showing the users how to connect to tenancy resources, which may or may not be supported by other means (ie. Resource Analytics).
+* Third, Resource Analytics simulates a near real-time direct connection to tenancy information to populate the app and begin asking complex Natural Language questions (using Wingmate) or visualizing scenarios using Property Graphs. 
+
+**Note:** Wingmate isn't a product branded by Oracle, but simply a new way of creating a data model and unlocking new insights about your data using APEX, which may or may not be supported by Resource Analytics. The advantage of building on APEX is that it is Free, while it allows for a more customizable experience. This lab has optionality to build the app and **import into the "side-car" Autonomous AI Database that is provisioned by Resource Analytics**.
 
 ![navigate home buttons](./images/cover-page.png "")
 
@@ -36,6 +43,7 @@ Estimated time - 1 hour
 In this workshop, you will learn how to:
 
 * Build Wingmate in APEX
+* Build a Data Model to support Wingmate
 * Build Security Wingmate
 * Build MultiCloud Wingmate
 

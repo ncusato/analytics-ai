@@ -18,16 +18,16 @@
             "filename": "../../2-build-apex-wingmate/build-apex-wingmate.md"
         },
         {
-            "title": "Lab 2: Build a Security Wingmate",
+            "title": "Lab 2: Build a Data Model to Support Wingmate",
+            "filename": "../../3-build-data-model/build-data-model.md"
+        },
+        {
+            "title": "Lab 3: Build a Security Wingmate",
             "filename": "../../3-build-security-wingmate/build-security-wingmate.md"
         },
                 {
-            "title": "Lab 3: Build a MultiCloud Wingmate",
+            "title": "Lab 4: Build a MultiCloud Wingmate",
             "filename": "../../4-build-multicloud-wingmate/build-multicloud-wingmate.md"
-        },
-                        {
-            "title": "Lab 4: Leverage Resource Analytics for Data Pipeline",
-            "filename": "../../5-leverage-resource-analytics/leverage-resource-analytics.md"
         },
         {
             "title": "Need Help?",
