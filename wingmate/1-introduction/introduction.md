@@ -2,7 +2,8 @@
 
 ## About this Workshop
 The scope of this workshop is to create a Oracle Cloud Infrastructure (OCI) Wingmate that will help monitor the security and deliver operations insights of a tenancy. This workshop uses Oracle 26ai Autonomous AI Database to store data collected from a tenancy and APEX to generate a dashboard to deliver operational insights never seen before. 
-**Resource Analytics** is a new product on OCI that provides near real-time information to enahance the visibility across IT infrastructure. This lab will serve as a guide for new users looking to get started with Resource Analytics and start building using APEX.
+
+[**Resource Analytics**](https://www.oracle.com/manageability/resource-analytics/) is a new product on OCI that provides near real-time information to enahance the visibility across IT infrastructure. This lab will serve as a guide for new users looking to get started with Resource Analytics and start building using APEX.
 
 The lab was deisgned to enable a user to develop an app from scratch using a combination of data sources: synthetic flat files, RESTful API, and/or Resource Analytics. 
 * First, for convience, synthetic data was populated into flat files (CSVs) to simulate batch data gathered from an API or other methods. 
