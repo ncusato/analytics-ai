@@ -135,22 +135,24 @@ Once completed, select **Create Instance**.
 
 	![Create instance button](./images/create-instance.png)
 
-3. Provide a **Name**, **Description**, and select the correct **Compartment**. 
+## Task 2: Provision Resource Anlaytics Instance
+
+1. Provide a **Name**, **Description**, and select the correct **Compartment**. 
 
 	>* **Note:** Click **View List** to see the services that you can connect to.
 
 	![Name the Resource Analytics Instance](./images/name-ra.png "")
 
-4. Select the **Regions** you want to collect data from. Additionally, select **Input Password** for the Autonomous Data Warehouse Admin Credentials and provide a **Password**.
+2. Select the **Regions** you want to collect data from. Additionally, select **Input Password** for the Autonomous Data Warehouse Admin Credentials and provide a **Password**.
 
 	![Region and Password for Instance](./images/name-ra.png "")
 
 
-5. 	Select a **VCN** and **Subnet**. Select **Create** at the bottom - leaving everything as default.
+3. 	Select a **VCN** and **Subnet**. Select **Create** at the bottom - leaving everything as default.
 
 	![VCN display](./images/create-complete.png "")
 
-6. Wait for the Provisioning to be complete.
+4. Wait for the Provisioning to be complete.
 
 	![Instance Provisioning](./images/provisioning-instance.png "")
 
