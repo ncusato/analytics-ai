@@ -2,9 +2,9 @@
 
 ## Introduction
 
-This lab walks the user on how to provision an Autonomous AI Database, generate API keys, and use these keys to connect Oracle GenAI services to the APEX application. Using synthetic data, the Security and Multicloud data will be modeled in the database as a reference for the GenAI services. Additionally, RESTful data collection from the tenancy can collected to generate live reporting of the Tenancy. This provides the Wingmate Application a streamlined observability into the tenancy operations using natural language.
+This lab walks the user on how to provision an Autonomous AI Database, generate API keys, and use these keys to connect Oracle GenAI services to the APEX application. 
 
-> **Note:** For reference, the list of available APIs that can be utilized for the optional Task #7: [OCI API Reference and Endpoints](https://docs.oracle.com/en-us/iaas/api/)
+>**Note:** If you prefer to build on top of **Resource Analytics** Database, skip ahead to **Lab 2: Build a Data Model for Wingmate**.
 
 Estimated time - 30 minutes
 
@@ -15,8 +15,6 @@ Estimated time - 30 minutes
 * Update the Credentials to Connect to OCI Resources
 * Create GenAI Service
 * Create the Application
-* Load Synthetic Data
-* (Optional) Connect RESTful data from Tenancy
 
 ### Prerequisites
 
@@ -154,118 +152,6 @@ Additionally under **Valid for URLs** include the following endpoint for the Gen
 
 	![Naming of the App](./images/name-app.png "") 
 
-## Task 6: Load Synthetic Data 
-
-1. Download the Lab files and unzip:
-
-	[Wingmate Data Zip](https://oraclejamescalise.objectstorage.us-phoenix-1.oci.customer-oci.com/p/72-f7TSP1o3DgeVKmh42oBuft-Q5vvRlyyGq4QPqYl2SI-p5ULJnbKDynL9v1qUO/n/oraclejamescalise/b/Wingmate-LL/o/wingmate_data.zip)
-
-2. Navigate to the SQL Workshop by pressing the **SQL Worshop button** at the top, and then **SQL Scripts**.
-
-	![SQL Workshop button](./images/sql-workshop.png "")
-
-
-3. Select **Upload** and upload **wingmate-ddl.sql** in the popup.
-
-	![Upload DDL script and run button](./images/execute-ddl-script.png "")
-
-	![load DDL script and upload button](./images/upload-script.png "")
-
-
-4. Click the **Run button** to execute the script.
-
-	![Run button](./images/run-sql.png "")
-
-5. Confirm the run script by clicking **Run Now** on the popup at the bottom. 
-
-	![Confirm button](./images/confirm-run.png "")
-
-6. Verify the script ran to completion.
-
-	![Sucessful DDL](./images/ddl-complete.png "")
-
-	>**Note:** If you see any errors, validate the error and identify if any conflicts exists with any tables/views.
-
-7. Navigate to Object Browser by clicking **SQL Workshop** and select **Object Browser**. 
-
-	![load csv navigation](./images/data-workshop.png "")
-
-8. Observe the new tables created and select the first one **CIS\_IAM\_POLICIES**, and select **Data** and **Load Data** in the center module.
-
-	![load data in tables](./images/data-loading.png "")
-
-9. Verify that the columns are automatically mapped and hit the green **Load Data** button at the bottom. 
-
-	![confirm data load](./images/load-data.png "")
-
-10. Repeat for each table with each dataset located in the unzipped directory.
-
-## Task 7: (Optional) Connect RESTful data from Tenancy
-
-1. Navigate back to the application by selecting **App Builder** and then the **OCI Wingmate** app name.
-
-	![Navigate to the Application](./images/nav-back-app.png "")
-
-2. Select **Shared components** to navigate to the RESTful operations.
-
-	![Navigate to the shared components](./images/shared-components.png "")
-
-3. Select **REST Data Sources** under Data Sources.
-
-	![Navigate to the REST Data Sources](./images/rest-data-services.png "")
-
-4. Select **Create** to create your first RESTful data source.
-
-	![Create RESTfull Data source Button](./images/create-rest-button.png "")
-	
-5. Select **Next** to create RESTful Data source from scratch.
-
-	![Create RESTfull Data source from scratch button](./images/create-from-scratch.png "")
-
-6. Name the service, such as the following **HostInsightsSummary** and paste an endpoint URL and select **Next**. For example endpoint: 
-	* **https://operationsinsights.us-ashburn-1.oci.oraclecloud.com/20200630/hostInsights/resourceStatistics**
-
-	> **Note:** For full list of endpoints, please check [Oracle Docs](https://docs.oracle.com/en-us/iaas/api/).
-
-	![Create RESTfull Data source from scratch button](./images/endpoint-name.png "")
-
-7. Validate the endpoint and select **Next**.
-
-	![Next button for remote server](./images/remote-server.png "")
-
-8. Select **Next** if no pagination is likely true.
-
-	![Next button with no pagination](./images/no-pagination.png "")
-
-9. Select the qualified credentails that allow for API queries of the tenancy. Select **Next**.
-
-	![Set credentials for Rest](./images/credentials-rest.png "")
-
-10. Navigate back if the endpoint requires parameters by selecting **back arrow**.
-
-	![Discovery Error](./images/discovery-error.png "")
-
-11. Select **Advanced** to define the parameters.
-
-	![Advanced Data Discovery](./images/advanced-data-source.png "")
-
-12. Insert the required parameters and select **Discover**.
-
-	![Header Compartment Example](./images/header-compartment.png "")
-
-	>**Note:** If the response says not authorized, navigate back to the credentials and select the correct credentials. This might require going back to Task 3 and creating a separate Web Credential for API, distinct from the GenAI service. Additionally, manage resource permissions are necessary for utilizing the API.
-
-	![Example Not Authorized Error](./images/not-authorized.png "")
-
-13. Validate a successfull data source discovery matches the expected profile. Select **Create REST Data Source** to finish the creation process for the REST endpoint. 
-
-	![Host details of successful discovery](./images/host-details.png "")
-
-	>**Note:** If not all columns are mapped, select **Configure button** to make sure it maps correctly.
-
-	![Configure map button](./images/configure-columns.png "")
-
-	![unmapped column](./images/unmapped-column.png "")
 
 You may now **proceed to the next lab**.
 
