@@ -156,7 +156,7 @@ Once completed, select **Create Instance**.
 
 	![Instance Provisioning](./images/provisioning-instance.png "")
 
-## Task 2: Connect pipeline to Wingmate
+## Task 3: Connect pipeline to Wingmate
 
 The Resource Analytics provisions an Autonomous AI Database in a private subnet. In order to view the data and import our Wingmate App, access can be granted for your personal IP address. 
 

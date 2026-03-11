@@ -10,7 +10,7 @@ The lab was deisgned to enable a user to develop an app from scratch using a com
 * Second, RESTful API direct connection is simulated by showing the users how to connect to tenancy resources, which may or may not be supported by other means (ie. Resource Analytics).
 * Third, Resource Analytics simulates a near real-time direct connection to tenancy information to populate the app and begin asking complex Natural Language questions (using Wingmate) or visualizing scenarios using Property Graphs. 
 
-**Note:** Wingmate isn't a product branded by Oracle, but simply a new way of creating a data model and unlocking new insights about your data using APEX, which may or may not be supported by Resource Analytics. The advantage of building on APEX is that it is Free, while it allows for a more customizable experience. This lab has optionality to build the app and **import into the "side-car" Autonomous AI Database that is provisioned by Resource Analytics**.
+>**Note:** Wingmate isn't a product branded by Oracle, but simply a new way of creating a data model and unlocking new insights about your data using APEX, which may or may not be supported by Resource Analytics. The advantage of building on APEX is that it is Free, while it allows for a more customizable experience. **This lab has optionality to build on a Always-Free Autonomous AI Database or utilize the resources provisioned by Resource Analytics to build on top of**.
 
 ![navigate home buttons](./images/cover-page.png "")
 
